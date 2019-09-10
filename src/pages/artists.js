@@ -5,12 +5,7 @@ export default props => {
   return (
     <Layout>
       <div className="container">
-        <h2>
-          <span role="img" aria-label="artist">
-            👩‍🎨
-          </span>{" "}
-          Artists
-        </h2>
+        <h2>Artists</h2>
         <p>
           Albert Diaz, Alex Bershaw, Ana Maria Velasco Lacayo, Aiko Fukuda,
           Andrew Kennedy, Anna Mogilevsky, Anna Grun, Ariel Freiberg, Boy Kong,
@@ -27,12 +22,7 @@ export default props => {
           Yuvak Tuladhar.
         </p>
 
-        <h2>
-          <span role="img" aria-label="folded hands">
-            🙏
-          </span>{" "}
-          We thank all Art for Tibet artists for their generous support!
-        </h2>
+        <h2>We thank all Art for Tibet artists for their generous support!</h2>
         <p>
           Aaron Angel, Abbie Winson, Abe Lincoln Jr., Adrianna Glaviano, Aki
           Onda, Alan Forbes, Albert Shelton, Alex Bershaw, Amanda Wachob, Amdo
