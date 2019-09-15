@@ -1,11 +1,11 @@
 import React from "react"
-import Layout from "../components/Layout/Layout"
+import Layout from "../components/layout"
 
-export default props => {
+export default () => {
   return (
     <Layout>
       <div className="container">
-        <h2>Artists</h2>
+        <h2>2019 Artists</h2>
         <p>
           Albert Diaz, Alex Bershaw, Ana Maria Velasco Lacayo, Aiko Fukuda,
           Andrew Kennedy, Anna Mogilevsky, Anna Grun, Ariel Freiberg, Boy Kong,

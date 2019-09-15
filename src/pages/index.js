@@ -1,5 +1,8 @@
 import React, { useEffect } from "react"
-import Layout from "../components/Layout/Layout"
+
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+
 import anime from "animejs/lib/anime.es"
 
 import heroBg from "../images/a4t2019-bgart.jpg"
@@ -7,7 +10,7 @@ import hhdl from "../images/hhdl.jpg"
 import heroOverlay from "../images/a4t2019-herooverlay.svg"
 import heroOverlayMobile from "../images/a4t2019-mobile-herooverlay.svg"
 
-export default props => {
+export default () => {
   function countdownTimer(countdownDate, kill) {
     // Update the count down every 1 second
     var x = setInterval(function() {
@@ -50,12 +53,14 @@ export default props => {
 
   return (
     <Layout>
+      <SEO />
       <div
         style={{
           backgroundImage: `url(${heroBg})`,
           backgroundColor: `#7B5D24`,
           backgroundSize: `cover`,
           position: `relative`,
+          boxShadow: `0 3px 9px rgba(0,0,0,.3)`,
         }}
         id="hero-wrapper"
       >

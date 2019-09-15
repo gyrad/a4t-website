@@ -1,5 +1,6 @@
-@import "variables";
-@import "mixins";
+import { createGlobalStyle } from "styled-components"
+
+export const GlobalStyle = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css");
 
@@ -79,3 +80,4 @@ img {
 .pos-rel {
   position: relative;
 }
+  `

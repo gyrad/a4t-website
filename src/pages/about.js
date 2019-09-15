@@ -1,7 +1,7 @@
 import React from "react"
-import Layout from "../components/Layout/Layout"
+import Layout from "../components/layout"
 
-export default props => {
+export default () => {
   return (
     <Layout>
       <div className="container">
