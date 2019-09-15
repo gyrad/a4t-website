@@ -7,7 +7,6 @@ import Footer from "./footer"
 
 import { GlobalStyle } from "./globalStyle"
 import "normalize.css"
-import "../styles/global.scss"
 
 const Layout = ({ children }) => {
   return (

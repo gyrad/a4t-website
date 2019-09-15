@@ -1,6 +1,5 @@
 {
   "name": "a4t-website",
-  "private": true,
   "description": "Art for Tibet website using Gatsby.js",
   "version": "0.1.0",
   "license": "MIT",
