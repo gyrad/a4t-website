@@ -1,8 +1,11 @@
 import { createGlobalStyle } from "styled-components"
+import { normalize } from "./normalize"
 
 export const GlobalStyle = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css");
+
+${normalize}
 
 html {
   box-sizing: border-box;
@@ -28,9 +31,9 @@ p {
 .container {
   margin: 0 auto;
   width: 100%;
-  max-width: $containerWidth;
+  max-width: 1200px;
   padding: 1rem;
-  @include breakpoint(tablet) {
+  @media (min-width: 600px) {
     padding: 1.5rem;
   }
 

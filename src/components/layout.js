@@ -5,8 +5,7 @@ import { LayoutWrapper, MainContent } from "./layoutComponents"
 import Header from "./header"
 import Footer from "./footer"
 
-import { GlobalStyle } from "./globalStyle"
-import "normalize.css"
+import { GlobalStyle } from "../styles/globalStyle"
 
 const Layout = ({ children }) => {
   return (
