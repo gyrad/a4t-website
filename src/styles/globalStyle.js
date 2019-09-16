@@ -67,14 +67,14 @@ img {
 
 #hhdl-quote {
   font-size: 1.4rem;
-  @include breakpoint(tablet) {
+  @media (min-width: 600px) {
     font-size: 2.2rem;
   }
 }
 
 #hero-wrapper {
   padding: 0.75rem;
-  @include breakpoint(tablet) {
+  @media (min-width: 600px) {
     padding: 1rem;
   }
 }
