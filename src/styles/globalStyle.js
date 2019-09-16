@@ -72,13 +72,6 @@ img {
   }
 }
 
-#hero-wrapper {
-  padding: 0.75rem;
-  @media (min-width: 600px) {
-    padding: 1rem;
-  }
-}
-
 /**** UTIL STYLES ****/
 .pos-rel {
   position: relative;
