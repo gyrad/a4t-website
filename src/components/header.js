@@ -41,7 +41,8 @@ const StyledHeader = styled(Header)`
     > div {
       flex-grow: 1;
       img {
-        height: 160px;
+        width: 138px;
+        height: 140px;
         transform: rotate(-20deg);
       }
     }
