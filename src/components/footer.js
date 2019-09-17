@@ -2,20 +2,20 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import { Container } from "../components/layoutComponents"
+import { Section, Container } from "../components/layoutComponents"
 
 import footerLogo from "../images/a4t2019-logo-white.svg"
 
 const Footer = ({ className }) => {
   return (
-    <div className={className}>
-      <div className="footer-info">
+    <footer className={className}>
+      <Section className="footer-info">
         <Container>
           <div>
             <img
               src={footerLogo}
               alt="Art for Tibet"
-              style={{ width: "150px" }}
+              style={{ width: "140px" }}
             />
           </div>
           <div>
@@ -43,9 +43,9 @@ const Footer = ({ className }) => {
             </p>
           </div>
         </Container>
-      </div>
-      <div className="copyright">
-        <Container>
+      </Section>
+      <Section className="copyright">
+        <Container vpadding="0.5">
           <div style={{ flexGrow: 1 }}>
             Copyright &copy; {new Date().getFullYear()} Art for Tibet
           </div>
@@ -65,8 +65,8 @@ const Footer = ({ className }) => {
             </a>
           </div>
         </Container>
-      </div>
-    </div>
+      </Section>
+    </footer>
   )
 }
 

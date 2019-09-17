@@ -1,10 +1,13 @@
 import React from "react"
 import Layout from "../components/layout"
+import { Container } from "../components/layoutComponents"
+import SEO from "../components/seo"
 
 export default () => {
   return (
     <Layout>
-      <div className="container">
+      <SEO title="Artists" />
+      <Container>
         <h2>2019 Artists</h2>
         <p>
           Albert Diaz, Alex Bershaw, Ana Maria Velasco Lacayo, Aiko Fukuda,
@@ -93,7 +96,7 @@ export default () => {
           Choephell, Virginia Wagner, War Boutique, Woeser, Yojiro Imasaka, Yoni
           Zilber, Yuri Shimojo, Yvonne Jacquette.
         </p>
-      </div>
+      </Container>
     </Layout>
   )
 }

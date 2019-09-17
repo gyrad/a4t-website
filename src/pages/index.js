@@ -1,14 +1,16 @@
 import React, { useEffect } from "react"
 import anime from "animejs/lib/anime.es"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
+import { Section, Container } from "../components/layoutComponents"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
 import Countdown from "../components/countdown"
 
 import hhdl from "../images/hhdl.jpg"
 
-export default () => {
+const IndexPage = () => {
   useEffect(() => {
     anime({
       targets: "#countdown",
@@ -20,28 +22,11 @@ export default () => {
 
   return (
     <Layout>
-      <SEO />
+      <SEO title="Home" />
       <Hero />
 
-      <div
-        style={{
-          background: "rgb(34,193,195)",
-          backgroundImage:
-            "linear-gradient(315deg, rgba(34,193,195,1) 0%, rgba(176,109,198,1) 100%)",
-        }}
-      >
-        <div
-          className="container"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "white",
-            textShadow: "2px 2px 7px rgba(0,0,0,.4)",
-            height: "200px",
-          }}
-        >
+      <CountdownSection>
+        <CountdownContainer>
           <p style={{ fontSize: "1.2rem" }}>
             Online Bidding Starts{" "}
             <span style={{ fontWeight: "bold", color: "#e5d438" }}>
@@ -49,22 +34,14 @@ export default () => {
             </span>
           </p>
           <Countdown />
-        </div>
-      </div>
+        </CountdownContainer>
+      </CountdownSection>
 
-      <div className="container">
-        <p
-          style={{
-            fontWeight: "bold",
-            textAlign: "center",
-            color: "#333",
-            lineHeight: 1.4,
-          }}
-          id="hhdl-quote"
-        >
+      <Container vpadding="3">
+        <HHDLQuote>
           “The achievements of Students for a Free Tibet show that nonviolent
           action does work.”
-        </p>
+        </HHDLQuote>
         <div
           style={{
             display: "flex",
@@ -85,7 +62,39 @@ export default () => {
         <p style={{ fontSize: ".9rem", textAlign: "center", color: "#888" }}>
           &mdash; His Holiness the 14<sup>th</sup> Dalai Lama
         </p>
-      </div>
+      </Container>
     </Layout>
   )
 }
+
+const CountdownSection = styled(Section)`
+  background: rgb(34, 193, 195);
+  background-image: linear-gradient(
+    315deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(176, 109, 198, 1) 100%
+  );
+`
+
+const CountdownContainer = styled(Container)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0px 0px 22px rgba(0, 0, 0, 0.4);
+  height: 200px;
+`
+
+const HHDLQuote = styled.p`
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  line-height: 1.4;
+  font-size: 1.4rem;
+  @media (min-width: 600px) {
+    font-size: 2.2rem;
+  }
+`
+
+export default IndexPage

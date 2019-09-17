@@ -7,9 +7,12 @@ export const LayoutWrapper = styled.div`
 `
 
 export const MainContent = styled.div`
-  background-color: #efefef;
+  background-color: #fff;
   flex-grow: 1;
-  padding-bottom: 2rem;
+`
+
+export const Section = styled.div`
+  display: block;
 `
 
 export const Container = styled.div`
@@ -20,16 +23,14 @@ export const Container = styled.div`
   @media (min-width: 600px) {
     padding: 1.5rem;
   }
-  ${({ novpadding }) =>
-    novpadding &&
-    `
-      margin-top: 0;
-      margin-bottom: 0;
+  && {
+    ${({ vpadding }) => `
+      padding-top: ${vpadding}rem;
+      padding-bottom: ${vpadding}rem;
     `}
-  ${({ nohpadding }) =>
-    nohpadding &&
-    `
-      margin-left: 0;
-      margin-right: 0;
+    ${({ hpadding }) => `
+      padding-left: ${hpadding}rem;
+      padding-right: ${hpadding}rem;
     `}
+  }
 `

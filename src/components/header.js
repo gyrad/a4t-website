@@ -12,7 +12,7 @@ import headerLogo from "../images/header-logo.svg"
 const Header = ({ className }) => {
   return (
     <header className={className}>
-      <Container novpadding>
+      <Container>
         <div>
           <Link to="/">
             <img src={headerLogo} alt="Art for Tibet" id="headerLogo" />

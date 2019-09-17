@@ -7,51 +7,21 @@ export const GlobalStyle = createGlobalStyle`
 
 ${normalize}
 
-html {
+html, body {
   box-sizing: border-box;
   font-family: "Noto Sans", sans-serif;
   line-height: 1.6;
+  width: 100vw
 }
-
 *,
 *::before,
 *::after {
   box-sizing: inherit;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
-body {
-  width: 100vw;
-}
-
 p {
   margin: 0.5rem 0;
 }
-
-.container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1200px;
-  padding: 1rem;
-  @media (min-width: 600px) {
-    padding: 1.5rem;
-  }
-
-  &--novpadding {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  &--nohpadding {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  &--nopadding {
-    padding: 0;
-  }
-}
-
 a {
   color: rgb(28, 116, 204);
   text-decoration: none;
@@ -60,20 +30,40 @@ a {
     color: rgb(92, 167, 241);
   }
 }
-
 img {
   max-width: 100%;
 }
-
-#hhdl-quote {
-  font-size: 1.4rem;
-  @media (min-width: 600px) {
-    font-size: 2.2rem;
+input {
+  border: 1px solid #DDD;
+  border-radius: 3px;
+  padding: .0rem .75rem;
+  height: 50px;
+  :focus {
+    outline: none;
+    box-shadow: 0 0 0px 3px rgba(34, 193, 195, .3);
+    border: 1px solid #6FCDF5;
+  }
+  ::placeholder {
+    color: #BBB;
   }
 }
 
-/**** UTIL STYLES ****/
-.pos-rel {
-  position: relative;
+button {
+  padding: .75rem 1rem;
+  border-radius: 3px;
+  background: #FFF;
+  color: #666;
+  border: 1px solid #DDD;
+  transition: border .3s, color .3s;
+  cursor: pointer;
+  :hover {
+    border-color: #BBB;
+    color: #444;
+  }
+  :focus {
+    outline: none;
+    box-shadow: 0 0 0px 3px rgba(34, 193, 195, .3);
+    border: 1px solid #6FCDF5;
+  }
 }
   `

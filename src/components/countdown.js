@@ -1,6 +1,8 @@
 import React, { useEffect } from "react"
+import PropTypes from "prop-types"
+import styled from "styled-components"
 
-const Countdown = () => {
+const Countdown = ({ className }) => {
   useEffect(() => {
     countdownTimer(new Date("Nov 1, 2019 00:00:00").getTime())
   }, [])
@@ -25,7 +27,14 @@ const Countdown = () => {
       let countdown = document.getElementById("countdown")
       if (countdown) {
         countdown.innerHTML =
-          days + "d " + hours + "h " + minutes + "m " + seconds + "s "
+          days +
+          "<span class='countdown-dhms'>days</span> " +
+          hours +
+          "<span class='countdown-dhms'>hrs</span> " +
+          minutes +
+          "<span class='countdown-dhms'>mins</span> " +
+          seconds +
+          "<span class='countdown-dhms'>secs</span> "
 
         // If the count down is finished, write some text
         if (distance < 0) {
@@ -36,10 +45,32 @@ const Countdown = () => {
   }
 
   return (
-    <div id="countdown" style={{ fontSize: "2.5rem", marginTop: 0 }}>
+    <div id="countdown" className={className}>
       &nbsp;
     </div>
   )
 }
 
-export default Countdown
+const StyledCountdown = styled(Countdown)`
+  font-size: 2.5rem;
+  @media (min-width: 600px) {
+    font-size: 3rem;
+  }
+  margin-top: 0;
+  font-weight: bold;
+  .countdown-dhms {
+    display: inline-block;
+    font-size: 0.8rem;
+    @media (min-width: 600px) {
+      font-size: 1.2rem;
+    }
+    margin-left: 0.3rem;
+    font-weight: lighter;
+  }
+`
+
+Countdown.propTypes = {
+  className: PropTypes.string.isRequired,
+}
+
+export default StyledCountdown

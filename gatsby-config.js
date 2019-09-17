@@ -1,9 +1,10 @@
 const path = require("path")
+const dotenv = require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
     title: `Art for Tibet`,
-    siteUrl: `http://artfortibet.org`,
+    siteUrl: `https://artfortibet.org`,
     description: `Art for Tibet brings together artists and activists to celebrate, commemorate, and support the Tibetan peoples’ nonviolent freedom struggle against occupation.`,
   },
   plugins: [
@@ -19,6 +20,12 @@ module.exports = {
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-mailchimp`,
+      options: {
+        endpoint: process.env.ENDPOINT_URL,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 
 import { LayoutWrapper, MainContent } from "./layoutComponents"
 import Header from "./header"
+import EmailSignup from "./emailSignup"
 import Footer from "./footer"
 
 import { GlobalStyle } from "../styles/globalStyle"
@@ -14,6 +15,7 @@ const Layout = ({ children }) => {
       <LayoutWrapper>
         <Header />
         <MainContent>{children}</MainContent>
+        <EmailSignup />
         <Footer />
       </LayoutWrapper>
     </>
