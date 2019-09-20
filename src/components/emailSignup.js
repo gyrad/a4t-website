@@ -43,8 +43,8 @@ const EmailSignup = ({ className }) => {
     <Section className={className}>
       <Container>
         <h2>
-          <i className="fas fa-envelope-open-text"></i> &nbsp;Get e-mail
-          updates!
+          <i className="fas fa-envelope-open-text"></i> &nbsp;Get email updates
+          on this year’s auction for Tibet:
         </h2>
         <div className="notification" ref={notificationRef}>
           <i className="fas fa-info-circle"></i> &nbsp; Hello
@@ -112,11 +112,11 @@ const StyledForm = styled.form`
 
 const StyledEmailSignup = styled(EmailSignup)`
   padding-bottom: 1.5rem;
-  background: rgb(255, 255, 255);
+  /* background: rgb(255, 255, 255);
   background: linear-gradient(
-    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.1) 0%,
     rgba(0, 0, 0, 0.1) 100%
-  );
+  ); */
 
   .privacy-notice {
     color: #aaa;

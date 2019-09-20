@@ -1,10 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
-
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
 
+import { Container, Section } from "../components/layoutComponents"
 import heroOverlay from "../images/a4t2019-herooverlay.svg"
 import heroOverlayMobile from "../images/a4t2019-mobile-herooverlay.svg"
 
@@ -13,7 +13,7 @@ const Hero = ({ className }) => {
     query MyQuery {
       file(relativePath: { eq: "a4t2019-bgart.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200) {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }
@@ -22,18 +22,22 @@ const Hero = ({ className }) => {
   `)
 
   return (
-    <BackgroundImage
-      Tag={`div`}
-      fluid={data.file.childImageSharp.fluid}
-      className={className}
-    >
-      <picture>
-        <source media="(min-width: 600px)" srcSet={heroOverlay} />
-        <source media="(max-width: 600px)" srcSet={heroOverlayMobile} />
-        <img src={heroOverlay} alt="Art for Tibet" />
-      </picture>
-      <TransparentBlackOverlay />
-    </BackgroundImage>
+    <Section style={{ backgroundColor: "#EEE" }}>
+      <StyledContainer>
+        <BackgroundImage
+          Tag={`div`}
+          fluid={data.file.childImageSharp.fluid}
+          className={className}
+        >
+          <picture>
+            <source media="(min-width: 600px)" srcSet={heroOverlay} />
+            <source media="(max-width: 600px)" srcSet={heroOverlayMobile} />
+            <img src={heroOverlay} alt="Art for Tibet" />
+          </picture>
+          <TransparentBlackOverlay />
+        </BackgroundImage>
+      </StyledContainer>
+    </Section>
   )
 }
 
@@ -46,6 +50,13 @@ const TransparentBlackOverlay = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
 `
 
+const StyledContainer = styled(Container)`
+  padding: 0;
+  @media (min-width: 1200px) {
+    padding: 1.5rem 0;
+  }
+`
+
 const StyledHero = styled(Hero)`
   padding: 0.75rem;
   padding-top: 61.98347%;
@@ -56,6 +67,7 @@ const StyledHero = styled(Hero)`
   background-color: #7b5d24;
   position: relative;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.3);
+
   img {
     position: absolute;
     top: 0.75rem;

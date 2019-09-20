@@ -28,6 +28,7 @@ a {
   transition: color 0.3s;
   &:hover {
     color: rgb(92, 167, 241);
+    text-decoration: underline;
   }
 }
 img {
@@ -38,6 +39,7 @@ input {
   border-radius: 3px;
   padding: .0rem .75rem;
   height: 50px;
+  background-color: white;
   :focus {
     outline: none;
     box-shadow: 0 0 0px 3px rgba(34, 193, 195, .3);
@@ -54,11 +56,13 @@ button {
   background: #FFF;
   color: #666;
   border: 1px solid #DDD;
-  transition: border .3s, color .3s;
+  transition: border .3s, color .3s, transform .4s, box-shadow .4s;
   cursor: pointer;
   :hover {
-    border-color: #BBB;
+    border-color: #CCC;
     color: #444;
+    transform: translateY(-3px);
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
   }
   :focus {
     outline: none;

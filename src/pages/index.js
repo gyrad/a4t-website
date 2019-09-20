@@ -2,15 +2,16 @@ import React, { useEffect } from "react"
 import anime from "animejs/lib/anime.es"
 import styled from "styled-components"
 
+import Countdown from "../components/countdown"
+import EmailSignup from "../components/emailSignup"
+import Hero from "../components/hero"
 import Layout from "../components/layout"
 import { Section, Container } from "../components/layoutComponents"
 import SEO from "../components/seo"
-import Hero from "../components/hero"
-import Countdown from "../components/countdown"
 
 import hhdl from "../images/hhdl.jpg"
 
-const IndexPage = () => {
+const IndexPage = props => {
   useEffect(() => {
     anime({
       targets: "#countdown",
@@ -20,8 +21,10 @@ const IndexPage = () => {
     })
   }, [])
 
+  console.log(props)
+
   return (
-    <Layout>
+    <Layout hideFooterEmailSignup={props.path === "/"}>
       <SEO title="Home" />
       <Hero />
 
@@ -36,6 +39,8 @@ const IndexPage = () => {
           <Countdown />
         </CountdownContainer>
       </CountdownSection>
+
+      <EmailSignup />
 
       <Container vpadding="3">
         <HHDLQuote>

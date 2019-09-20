@@ -8,14 +8,14 @@ import Footer from "./footer"
 
 import { GlobalStyle } from "../styles/globalStyle"
 
-const Layout = ({ children }) => {
+const Layout = ({ hideFooterEmailSignup, children }) => {
   return (
     <>
       <GlobalStyle />
       <LayoutWrapper>
         <Header />
         <MainContent>{children}</MainContent>
-        <EmailSignup />
+        {hideFooterEmailSignup || <EmailSignup />}
         <Footer />
       </LayoutWrapper>
     </>

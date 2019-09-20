@@ -13,7 +13,9 @@ const SEO = ({ title }) => {
     }
   `)
   return (
-    <Helmet title={title} titleTemplate={`%s | ${site.siteMetadata.title}`} />
+    <Helmet title={title} titleTemplate={`%s | ${site.siteMetadata.title}`}>
+      <html lang="en" />
+    </Helmet>
   )
 }
 

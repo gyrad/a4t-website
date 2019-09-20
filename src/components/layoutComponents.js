@@ -7,7 +7,6 @@ export const LayoutWrapper = styled.div`
 `
 
 export const MainContent = styled.div`
-  background-color: #fff;
   flex-grow: 1;
 `
 
