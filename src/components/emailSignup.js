@@ -112,11 +112,7 @@ const StyledForm = styled.form`
 
 const StyledEmailSignup = styled(EmailSignup)`
   padding-bottom: 1.5rem;
-  /* background: rgb(255, 255, 255);
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(0, 0, 0, 0.1) 100%
-  ); */
+  z-index: 2;
 
   .privacy-notice {
     color: #aaa;

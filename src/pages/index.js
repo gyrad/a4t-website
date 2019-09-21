@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import PropTypes from "prop-types"
 import anime from "animejs/lib/anime.es"
 import styled from "styled-components"
 
@@ -10,8 +11,10 @@ import { Section, Container } from "../components/layoutComponents"
 import SEO from "../components/seo"
 
 import hhdl from "../images/hhdl.jpg"
+import a4tVideoLogo from "../images/a4t2019-squarelogo.svg"
+import a4tVideo from "../videos/a4t-promo.mp4"
 
-const IndexPage = props => {
+const IndexPage = ({ path }) => {
   useEffect(() => {
     anime({
       targets: "#countdown",
@@ -21,12 +24,40 @@ const IndexPage = props => {
     })
   }, [])
 
-  console.log(props)
-
   return (
-    <Layout hideFooterEmailSignup={props.path === "/"}>
+    <Layout hideFooterEmailSignup={path === "/"}>
       <SEO title="Home" />
       <Hero />
+
+      <EmailSignup />
+
+      <VideoContainer>
+        <Container className="video">
+          <video controls src={a4tVideo} poster={a4tVideoLogo}>
+            Sorry, your browser doesn't support embedded videos.
+          </video>
+        </Container>
+        <Container>
+          <h1>Art for Tibet 2019</h1>
+          <p>
+            We are thrilled to announce that legendary NYC hip-hop artist &
+            Beastie Boys collaborator <strong>Cey Adams</strong> and
+            French-Tibetan painter <strong>Marie-Dolma Chophel</strong> have
+            joined this year’s Honorary Committee alongside returning members{" "}
+            <strong>Shepard Fairey</strong> and Columbia Professor of
+            Indo-Tibetan Studies <strong>Robert Thurman</strong>.
+          </p>
+
+          <p>
+            Together with the Honorary Committee, we the Organizing Committee
+            invites you to celebrate resistance, freedom and art with us as a
+            contributing artist to this year’s Art for Tibet. Art for Tibet is
+            Students for a Free Tibet’s (SFT) most important annual fundraiser,
+            which enables SFT to continue its fight for the Tibetan people’s
+            fundamental human rights and freedom.
+          </p>
+        </Container>
+      </VideoContainer>
 
       <CountdownSection>
         <CountdownContainer>
@@ -39,8 +70,6 @@ const IndexPage = props => {
           <Countdown />
         </CountdownContainer>
       </CountdownSection>
-
-      <EmailSignup />
 
       <Container vpadding="3">
         <HHDLQuote>
@@ -72,6 +101,29 @@ const IndexPage = props => {
   )
 }
 
+const VideoContainer = styled(Container)`
+  display: block;
+  @media (min-width: 600px) {
+    display: flex;
+  }
+  .video {
+    flex: 1;
+    video {
+      width: 100%;
+      outline: 0;
+      object-fit: cover;
+      border-radius: 8px;
+      display: inline-block;
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      transition: border-color 0.4s, box-shadow 0.4s;
+    }
+  }
+  div {
+    flex: 2;
+  }
+`
+
 const CountdownSection = styled(Section)`
   background: rgb(34, 193, 195);
   background-image: linear-gradient(
@@ -88,7 +140,10 @@ const CountdownContainer = styled(Container)`
   justify-content: center;
   color: white;
   text-shadow: 0px 0px 22px rgba(0, 0, 0, 0.4);
-  height: 200px;
+  height: 150px;
+  @media (min-width: 600px) {
+    height: 180px;
+  }
 `
 
 const HHDLQuote = styled.p`
@@ -101,5 +156,9 @@ const HHDLQuote = styled.p`
     font-size: 2.2rem;
   }
 `
+
+IndexPage.propTypes = {
+  path: PropTypes.string.isRequired,
+}
 
 export default IndexPage

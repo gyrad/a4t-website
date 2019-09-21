@@ -73,7 +73,7 @@ const Footer = ({ className }) => {
 const StyledFooter = styled(Footer)`
   font-size: 0.9rem;
   box-shadow: 0 -25px 160px 80px rgba(0, 00, 0, 0.1);
-  z-index: -1;
+  z-index: 1;
 
   .footer-info {
     background-color: #333;

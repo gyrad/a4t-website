@@ -7,6 +7,7 @@ const SEO = ({ title }) => {
     query {
       site {
         siteMetadata {
+          description
           title
         }
       }
@@ -15,6 +16,7 @@ const SEO = ({ title }) => {
   return (
     <Helmet title={title} titleTemplate={`%s | ${site.siteMetadata.title}`}>
       <html lang="en" />
+      <meta name="description" content={site.siteMetadata.description} />
     </Helmet>
   )
 }
