@@ -38,6 +38,23 @@ const IndexPage = ({ path }) => {
           </video>
         </Container>
         <Container>
+          <svg
+            width="290"
+            height="251"
+            viewBox="0 0 290 251"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M220.692 131.433L290 251H151.384L220.692 131.433Z"
+              fill="#F299C1"
+            />
+            <path d="M145 0L213.852 120.024H75.6918L145 0Z" fill="#FDF49B" />
+            <path
+              d="M69.3082 131.433L138.16 251H0L69.3082 131.433Z"
+              fill="#6ECEF5"
+            />
+          </svg>
           <h1>Art for Tibet 2019</h1>
           <p>
             We are thrilled to announce that legendary NYC hip-hop artist &
@@ -106,6 +123,20 @@ const VideoContainer = styled(Container)`
   @media (min-width: 600px) {
     display: flex;
   }
+  div {
+    flex: 2;
+    position: relative;
+    svg {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+      width: 180px;
+      opacity: 0.5;
+      height: auto;
+      filter: blur(5px);
+    }
+  }
   .video {
     flex: 1;
     video {
@@ -118,9 +149,6 @@ const VideoContainer = styled(Container)`
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
       transition: border-color 0.4s, box-shadow 0.4s;
     }
-  }
-  div {
-    flex: 2;
   }
 `
 

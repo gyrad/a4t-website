@@ -6,11 +6,9 @@
   "homepage": "https://artfortibet.org",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop --host 0.0.0.0",
+    "develop": "GATSBY_GRAPHQL_IDE=playground gatsby develop --host 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+    "start": "npm run develop"
   },
   "dependencies": {
     "animejs": "^3.1.0",

@@ -94,7 +94,7 @@ const StyledForm = styled.form`
     margin-bottom: 0.5rem;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 850px) {
     flex-direction: row;
     > input {
       display: block;
@@ -118,6 +118,7 @@ const StyledEmailSignup = styled(EmailSignup)`
     color: #aaa;
     font-size: 0.8rem;
     text-align: right;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
 
     span {
       display: block;
