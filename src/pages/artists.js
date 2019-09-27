@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import { Container } from "../components/layoutComponents"
+import PurchaseCard from "../components/purchaseCard"
 import SEO from "../components/seo"
 
 export default () => {
@@ -8,7 +9,7 @@ export default () => {
     <Layout>
       <SEO title="Artists" />
       <Container>
-        <h2>2019 Artists</h2>
+        <h1>2019 Artists</h1>
         <p>
           Albert Diaz, Alex Bershaw, Ana Maria Velasco Lacayo, Aiko Fukuda,
           Andrew Kennedy, Anna Mogilevsky, Anna Grun, Ariel Freiberg, Boy Kong,
@@ -25,8 +26,10 @@ export default () => {
           Yuvak Tuladhar.
         </p>
 
+        <PurchaseCard />
+
         <h2>We thank all Art for Tibet artists for their generous support!</h2>
-        <p>
+        <p style={{ fontSize: ".8rem" }}>
           Aaron Angel, Abbie Winson, Abe Lincoln Jr., Adrianna Glaviano, Aki
           Onda, Alan Forbes, Albert Shelton, Alex Bershaw, Amanda Wachob, Amdo
           Kunchok, Amy Ruppel, Ang Tsherin Sherpa, Anthony Carlos Molden,

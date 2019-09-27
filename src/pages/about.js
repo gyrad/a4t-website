@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import { Container } from "../components/layoutComponents"
+import PurchaseCard from "../components/purchaseCard"
 import SEO from "../components/seo"
 
 export default () => {
@@ -8,7 +9,7 @@ export default () => {
     <Layout>
       <SEO title="About" />
       <Container>
-        <h2>About</h2>
+        <h1>About</h1>
         <p>
           Art plays a vital role in Tibetan culture, and has long been a
           profound tool for social and political change. Art for Tibet brings
@@ -47,6 +48,8 @@ export default () => {
           Committee members for 2018: Jonathan Hulland, Alex Bershaw, Pema Yoko,
           and Tenzin Dorjee.
         </p>
+
+        <PurchaseCard />
       </Container>
     </Layout>
   )

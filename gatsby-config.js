@@ -1,11 +1,25 @@
 const path = require("path")
 const dotenv = require("dotenv").config()
+var proxy = require("http-proxy-middleware")
 
 module.exports = {
   siteMetadata: {
     title: `Art for Tibet`,
     siteUrl: `https://artfortibet.org`,
     description: `Art for Tibet brings together artists and activists to celebrate, commemorate, and support the Tibetan peoples’ nonviolent freedom struggle against occupation.`,
+  },
+  // for avoiding CORS while developing Netlify Functions locally
+  // read more: https://www.gatsbyjs.org/docs/api-proxy/#advanced-proxying
+  developMiddleware: app => {
+    app.use(
+      "/.netlify/functions/",
+      proxy({
+        target: "http://0.0.0.0:9000",
+        pathRewrite: {
+          "/.netlify/functions/": "",
+        },
+      })
+    )
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -26,6 +40,7 @@ module.exports = {
         endpoint: process.env.ENDPOINT_URL,
       },
     },
+    `gatsby-plugin-stripe`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

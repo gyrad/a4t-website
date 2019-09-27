@@ -118,7 +118,7 @@ const StyledEmailSignup = styled(EmailSignup)`
     color: #aaa;
     font-size: 0.8rem;
     text-align: right;
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 
     span {
       display: block;

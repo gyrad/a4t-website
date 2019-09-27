@@ -8,6 +8,7 @@ import EmailSignup from "../components/emailSignup"
 import Hero from "../components/hero"
 import Layout from "../components/layout"
 import { Section, Container } from "../components/layoutComponents"
+import PurchaseCard from "../components/purchaseCard"
 import SEO from "../components/seo"
 
 import hhdl from "../images/hhdl.jpg"
@@ -24,13 +25,35 @@ const IndexPage = ({ path }) => {
     })
   }, [])
 
+  // The following is code for Stripe Checkout
+
+  // let stripe
+  // useEffect(() => {
+  //   stripe = window.Stripe("pk_test_VM3CFtcuFgaY3PlZj3bUn4Rf")
+  // }, [])
+
+  // const checkoutHandler = async () => {
+  //   // When the customer clicks on the button, redirect
+  //   // them to Checkout.
+  //   const { error } = await stripe.redirectToCheckout({
+  //     items: [{ sku: "sku_FrkHOyh8PGIzQg", quantity: 1 }],
+
+  //     // Do not rely on the redirect to the successUrl for fulfilling
+  //     // purchases, customers may not always reach the success_url after
+  //     // a successful payment.
+  //     successUrl: "https://www.artfortibet.org",
+  //     cancelUrl: "http://0.0.0.0:8000",
+  //   })
+
+  //   console.warn(error)
+  // }
+
   return (
     <Layout hideFooterEmailSignup={path === "/"}>
       <SEO title="Home" />
       <Hero />
 
       <EmailSignup />
-
       <VideoContainer>
         <Container className="video">
           <video controls src={a4tVideo} poster={a4tVideoLogo}>
@@ -75,7 +98,6 @@ const IndexPage = ({ path }) => {
           </p>
         </Container>
       </VideoContainer>
-
       <CountdownSection>
         <CountdownContainer>
           <p style={{ fontSize: "1.2rem" }}>
@@ -87,6 +109,8 @@ const IndexPage = ({ path }) => {
           <Countdown />
         </CountdownContainer>
       </CountdownSection>
+
+      <PurchaseCard />
 
       <Container vpadding="3">
         <HHDLQuote>

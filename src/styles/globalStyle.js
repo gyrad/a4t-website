@@ -37,8 +37,8 @@ img {
 input {
   border: 1px solid #DDD;
   border-radius: 3px;
-  padding: .0rem .75rem;
-  height: 50px;
+  padding: 0rem .75rem;
+  height: 36px;
   background-color: white;
   :focus {
     outline: none;
@@ -50,8 +50,8 @@ input {
   }
 }
 
-button {
-  padding: .75rem 1rem;
+button, input[type="submit"], input[type="button"] {
+  padding: .5rem 1rem;
   border-radius: 3px;
   background: #FFF;
   color: #666;
@@ -64,6 +64,20 @@ button {
     transform: translateY(-3px);
     box-shadow: 0 2px 8px rgba(0,0,0,.1);
   }
+  :focus {
+    outline: none;
+    box-shadow: 0 0 0px 3px rgba(34, 193, 195, .3);
+    border: 1px solid #6FCDF5;
+  }
+}
+
+select {
+  height: 2rem;
+  font-size: 1rem;
+  border-radius: 3px;
+  background: #FFF;
+  color: #666;
+  border: 1px solid #DDD;
   :focus {
     outline: none;
     box-shadow: 0 0 0px 3px rgba(34, 193, 195, .3);
