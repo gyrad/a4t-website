@@ -103,7 +103,7 @@ const IndexPage = ({ path }) => {
           <p style={{ fontSize: "1.2rem" }}>
             Online Bidding Starts{" "}
             <span style={{ fontWeight: "bold", color: "#e5d438" }}>
-              November 1
+              October 25
             </span>
           </p>
           <Countdown />

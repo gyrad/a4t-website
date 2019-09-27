@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 const Countdown = ({ className }) => {
   useEffect(() => {
-    countdownTimer(new Date("Nov 1, 2019 00:00:00").getTime())
+    countdownTimer(new Date("Oct 25, 2019 00:00:00").getTime())
   }, [])
 
   function countdownTimer(countdownDate, kill) {

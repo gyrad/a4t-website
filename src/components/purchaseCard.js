@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import { Container } from "../components/layoutComponents"
 import PurchaseModal from "../components/purchaseModal"
-import a4tbag from "../images/a4tbag.jpg"
+import a4tbag from "../images/a4tbag-alt.jpg"
 
 const PurchaseCard = ({ className }) => {
   const [purchaseModalIsOpen, setPurchaseModalIsOpen] = useState(false)
@@ -21,10 +21,13 @@ const PurchaseCard = ({ className }) => {
       <img src={a4tbag} alt="Art for Tibet bag" />
       <div>
         <div>
-          <h2>Get your swag on</h2>
+          <h2>
+            <i className="fas fa-fire" /> &nbsp;Get your swag on
+          </h2>
           <p>
             Support Tibet by buying one of our classic Art for Tibet tote bags!
-            Get them for $20 including shipping and taxes while supplies last.
+            Get them in gray or black for $20 including shipping and taxes while
+            supplies last.
           </p>
         </div>
         <button onClick={() => setPurchaseModalIsOpen(true)}>Buy Now!</button>
@@ -35,26 +38,26 @@ const PurchaseCard = ({ className }) => {
 
 const StyledPurchaseCard = styled(PurchaseCard)`
   background: white;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
   width: 90%;
   @media (min-width: 600px) {
     flex-direction: row;
-    width: 70%;
+    width: 80%;
   }
   @media (min-width: 1000px) {
     flex-direction: row;
-    width: 50%;
+    width: 60%;
   }
   padding: 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.4s, transform 0.4s;
 
   :hover {
-    img {
-      filter: grayscale(1);
-    }
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
   }
 
   > img {
@@ -62,10 +65,9 @@ const StyledPurchaseCard = styled(PurchaseCard)`
     flex: 1;
     width: 100%;
     @media (min-width: 600px) {
-      width: 40%;
+      width: 50%;
     }
     object-fit: cover;
-    transition: filter 0.5s;
   }
 
   > div {
