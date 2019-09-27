@@ -52,7 +52,7 @@ const PurchaseModal = ({ className, isOpen, closeModal, stripe }) => {
           country,
           quantity,
           postalCode: token.card.address_zip,
-          skuId: "sku_FrkHOyh8PGIzQg",
+          skuId: "sku_FrjVCqLfjBp8dr",
           source: token.id,
           tokenId: token.id,
         },
