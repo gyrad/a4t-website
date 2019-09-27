@@ -17,15 +17,18 @@ const PurchaseModal = ({ className, isOpen, closeModal, stripe }) => {
   const [stateProvince, setStateProvince] = useState("")
   const [country, setCountry] = useState("")
 
+  const [bagColor, setBagColor] = useState("black")
   const [quantity, setQuantity] = useState(1)
   const [total, setTotal] = useState(20)
+  const [skuId, setSkuId] = useState("sku_FrjVCqLfjBp8dr")
 
   const [paymentComplete, setPaymentComplete] = useState(false)
   const [isConnecting, setIsConnecting] = useState(false)
 
   useEffect(() => {
     setTotal(quantity * 20)
-  }, [quantity])
+    setSkuId(bagColor === "black" ? "sku_FrjVCqLfjBp8dr" : "sku_FtCYbaYdGmVGGa")
+  }, [quantity, bagColor])
 
   const resetSuccessAndCloseModal = () => {
     if (paymentComplete) setTimeout(() => setPaymentComplete(false), 1000)
@@ -52,7 +55,7 @@ const PurchaseModal = ({ className, isOpen, closeModal, stripe }) => {
           country,
           quantity,
           postalCode: token.card.address_zip,
-          skuId: "sku_FrjVCqLfjBp8dr",
+          skuId,
           source: token.id,
           tokenId: token.id,
         },
@@ -74,11 +77,19 @@ const PurchaseModal = ({ className, isOpen, closeModal, stripe }) => {
       <div className="form-row form-row--header">
         <h1>Art for Tibet bag </h1>
         <select
+          title="Color"
+          value={bagColor}
+          onChange={e => setBagColor(e.target.value)}
+        >
+          <option>Black</option>
+          <option>Gray</option>
+        </select>
+        <select
           onChange={e => setQuantity(e.target.value)}
           className="quantity"
           value={quantity}
+          title="Quantity"
         >
-          <option disabled>Quantity</option>
           <option value="1" defaultValue>
             1
           </option>
@@ -241,7 +252,7 @@ const StyledPurchaseModal = styled(PurchaseModal)`
           text-overflow: ellipsis;
         }
       }
-      .quantity {
+      select {
         align-self: center;
         margin-left: 0.5rem;
         @media (min-width: 600px) {
