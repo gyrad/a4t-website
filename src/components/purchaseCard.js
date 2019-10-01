@@ -49,7 +49,7 @@ const StyledPurchaseCard = styled(PurchaseCard)`
   }
   @media (min-width: 1000px) {
     flex-direction: row;
-    width: 60%;
+    width: 70%;
   }
   padding: 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -57,7 +57,7 @@ const StyledPurchaseCard = styled(PurchaseCard)`
 
   :hover {
     box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
-    transform: translateY(-3px);
+    transform: translateY(-1px);
   }
 
   > img {
@@ -76,6 +76,7 @@ const StyledPurchaseCard = styled(PurchaseCard)`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
     h2 {
       margin: 0;
       margin-bottom: 1rem;

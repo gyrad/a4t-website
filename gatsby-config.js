@@ -1,6 +1,6 @@
 const path = require("path")
-const dotenv = require("dotenv").config()
 var proxy = require("http-proxy-middleware")
+require("dotenv").config()
 
 module.exports = {
   siteMetadata: {

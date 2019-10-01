@@ -12,8 +12,7 @@ import PurchaseCard from "../components/purchaseCard"
 import SEO from "../components/seo"
 
 import hhdl from "../images/hhdl.jpg"
-import a4tVideoLogo from "../images/a4t2019-squarelogo.svg"
-import a4tVideo from "../videos/a4t-promo.mp4"
+import monksArt from "../images/monks-art.jpeg"
 
 const IndexPage = ({ path }) => {
   useEffect(() => {
@@ -54,13 +53,11 @@ const IndexPage = ({ path }) => {
       <Hero />
 
       <EmailSignup />
-      <VideoContainer>
-        <Container className="video">
-          <video controls src={a4tVideo} poster={a4tVideoLogo}>
-            Sorry, your browser doesn't support embedded videos.
-          </video>
-        </Container>
-        <Container>
+      <IntroTextContainer>
+        <div className="image-wrapper">
+          <img src={monksArt} alt="Monks at a past Art for Tibet event." />
+        </div>
+        <div>
           <svg
             width="290"
             height="251"
@@ -96,8 +93,8 @@ const IndexPage = ({ path }) => {
             which enables SFT to continue its fight for the Tibetan people’s
             fundamental human rights and freedom.
           </p>
-        </Container>
-      </VideoContainer>
+        </div>
+      </IntroTextContainer>
       <CountdownSection>
         <CountdownContainer>
           <p style={{ fontSize: "1.2rem" }}>
@@ -142,13 +139,14 @@ const IndexPage = ({ path }) => {
   )
 }
 
-const VideoContainer = styled(Container)`
+const IntroTextContainer = styled(Container)`
   display: block;
+  margin-bottom: 1.5rem;
   @media (min-width: 600px) {
     display: flex;
   }
   div {
-    flex: 2;
+    flex: 3;
     position: relative;
     svg {
       position: absolute;
@@ -161,17 +159,21 @@ const VideoContainer = styled(Container)`
       filter: blur(5px);
     }
   }
-  .video {
+  .image-wrapper {
     flex: 1;
-    video {
+    padding: 0;
+    margin-right: 0;
+    @media (min-width: 600px) {
+      padding: 1.5rem;
+    }
+    @media (min-width: 1000px) {
+      margin-right: 1rem;
+    }
+    img {
       width: 100%;
-      outline: 0;
+      height: 300px;
       object-fit: cover;
-      border-radius: 8px;
-      display: inline-block;
-      background: #fff;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-      transition: border-color 0.4s, box-shadow 0.4s;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.4);
     }
   }
 `

@@ -108,7 +108,7 @@ const StyledNavigation = styled(Navigation)`
         li a {
           color: #aaa;
           text-decoration: none;
-          font-size: 2.5rem;
+          font-size: 2rem;
           position: relative;
           left: 0;
           transition: left 0.5s ease;

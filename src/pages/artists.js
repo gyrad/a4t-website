@@ -1,33 +1,50 @@
 import React from "react"
+import styled from "styled-components"
+
 import Layout from "../components/layout"
 import { Container } from "../components/layoutComponents"
 import PurchaseCard from "../components/purchaseCard"
 import SEO from "../components/seo"
 
-export default () => {
+import stevenCogle from "../images/steven-cogle.jpeg"
+
+const ArtistPage = () => {
   return (
     <Layout>
       <SEO title="Artists" />
       <Container>
         <h1>2019 Artists</h1>
-        <p>
-          Albert Diaz, Alex Bershaw, Ana Maria Velasco Lacayo, Aiko Fukuda,
-          Andrew Kennedy, Anna Mogilevsky, Anna Grun, Ariel Freiberg, Boy Kong,
-          Chris Bartlett, Christian Mendoza, Craig Anthony Miller, Cey Adams,
-          Choichun Leung, Chungpo, Damion Silver, Emma Goodman, Eric Inkala,
-          Gyatso Chuteng, Irina Fialco, Jondix, Jon Marro, Juan Carlos Pinto,
-          Karen Zilly, Kesang Lamdark, Kenzo Minami, Kenji Hirata, Kimyon, Karma
-          Phuntsok, Li Hill, Magda Dejose, Maya Hayuk, Marthalicia Matarrita,
-          Melodie Provenzano, Marie-Dolma Chophel, Michela Muserra, Miguel
-          Ovalle, Mike Schreiber, Minzaya Oo, Mohsen Dinali, Noah Tavlin,
-          Ngawang Jorden, Palden Weinreb, Patrick Dougher, Pema Rinzin, Pete
-          Speller, Rima Fujita, Rubén Salgado Escudero, Sogan Rinpoche, Shepard
-          Fairey, Shinya Kato, Steve Cogle, Tashi Norbu, Yen Chua, Yoni Zilber,
-          Yuvak Tuladhar.
-        </p>
+        <IntroWrapper>
+          <HeaderImageWrapper>
+            <img
+              src={stevenCogle}
+              alt="Artist Steven Cogle at a previous Art for Tibet event."
+              className="header-image"
+            />
+          </HeaderImageWrapper>
+          <Intro>
+            <p>
+              Albert Diaz, Alex Bershaw, Ana Maria Velasco Lacayo, Aiko Fukuda,
+              Andrew Kennedy, Anna Mogilevsky, Anna Grun, Ariel Basson Freiberg,
+              Boy Kong, Chris Bartlett, Christian Mendoza, Craig Anthony Miller,
+              Cey Adams, Choichun Leung, Chungpo, Damion Silver, Emma Goodman,
+              Eric Inkala, Gyatso Chuteng, Irina Fialco, James Stanford, Jondix,
+              Jon Marro, Juan Carlos Pinto, Karen Zilly, Kesang Lamdark, Kenzo
+              Minami, Kenji Hirata, Kimyon, Karma Phuntsok, Li Hill, Magda
+              Dejose, Maya Hayuk, Marthalicia Matarrita, Melodie Provenzano,
+              Marie-Dolma Chophel, Michela Muserra, Miguel Ovalle, Mike
+              Schreiber, Minzaya Oo, Mohsen Dinali, Noah Tavlin, Ngawang Jorden,
+              Palden Weinreb, Patrick Dougher, Pema Rinzin, Pete Speller, Rima
+              Fujita, Rubén Salgado Escudero, Sogan Rinpoche, Shepard Fairey,
+              Shinya Kato, Steve Cogle, Tashi Norbu, Tenzin Kelsang, Tenzing
+              Tashi, Yen Chua, Yoni Zilber, Yuvak Tuladhar.
+            </p>
+          </Intro>
+        </IntroWrapper>
+      </Container>
 
-        <PurchaseCard />
-
+      <PurchaseCard />
+      <Container>
         <h2>We thank all Art for Tibet artists for their generous support!</h2>
         <p style={{ fontSize: ".8rem" }}>
           Aaron Angel, Abbie Winson, Abe Lincoln Jr., Adrianna Glaviano, Aki
@@ -103,3 +120,35 @@ export default () => {
     </Layout>
   )
 }
+
+const IntroWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
+`
+
+const Intro = styled.div`
+  flex: 5;
+`
+
+const HeaderImageWrapper = styled.div`
+  flex: 2;
+  margin-left: 0;
+  padding: 1.5rem 0;
+  order: 2;
+  @media (min-width: 600px) {
+    padding: 1.5rem;
+    margin-left: 1rem;
+  }
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.4);
+  }
+`
+
+export default ArtistPage

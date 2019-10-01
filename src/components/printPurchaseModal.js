@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import axios from "axios"
 import Modal from "react-modal"
 import { injectStripe, CardElement } from "react-stripe-elements"
@@ -6,7 +6,15 @@ import styled from "styled-components"
 
 Modal.setAppElement("#___gatsby")
 
-const PurchaseModal = ({ className, isOpen, closeModal, stripe }) => {
+const PrintPurchaseModal = ({
+  className,
+  isOpen,
+  closeModal,
+  stripe,
+  skuId,
+  title,
+  total,
+}) => {
   const contentClassName = `${className}__content`
   const overlayClassName = `${className}__overlay`
 
@@ -17,22 +25,8 @@ const PurchaseModal = ({ className, isOpen, closeModal, stripe }) => {
   const [stateProvince, setStateProvince] = useState("")
   const [country, setCountry] = useState("")
 
-  const [bagColor, setBagColor] = useState("black")
-  const [quantity, setQuantity] = useState(1)
-  const [total, setTotal] = useState(20)
-  const [skuId, setSkuId] = useState(process.env.GATSBY_SKU_BLACK_BAG)
-
   const [paymentComplete, setPaymentComplete] = useState(false)
   const [isConnecting, setIsConnecting] = useState(false)
-
-  useEffect(() => {
-    setTotal(quantity * 20)
-    setSkuId(
-      bagColor === "black"
-        ? process.env.GATSBY_SKU_BLACK_BAG
-        : process.env.GATSBY_SKU_GRAY_BAG
-    )
-  }, [quantity, bagColor])
 
   const resetSuccessAndCloseModal = () => {
     if (paymentComplete) setTimeout(() => setPaymentComplete(false), 1000)
@@ -57,7 +51,7 @@ const PurchaseModal = ({ className, isOpen, closeModal, stripe }) => {
               {
                 type: "sku",
                 parent: skuId,
-                quantity,
+                quantity: 1,
               },
             ],
             shipping: {
@@ -78,7 +72,6 @@ const PurchaseModal = ({ className, isOpen, closeModal, stripe }) => {
 
       if (response.status === 200) {
         setPaymentComplete(true)
-        setQuantity(1)
         setIsConnecting(false)
       }
     } catch (err) {
@@ -90,33 +83,7 @@ const PurchaseModal = ({ className, isOpen, closeModal, stripe }) => {
   const renderForm = (
     <form onSubmit={submitHandler}>
       <div className="form-row form-row--header">
-        <h1>Art for Tibet bag </h1>
-        <select
-          title="Color"
-          value={bagColor}
-          onChange={e => setBagColor(e.target.value)}
-        >
-          <option>Black</option>
-          <option>Gray</option>
-        </select>
-        <select
-          onChange={e => setQuantity(e.target.value)}
-          className="quantity"
-          value={quantity}
-          title="Quantity"
-        >
-          <option value="1" defaultValue>
-            1
-          </option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-        </select>
+        <h1>{title} </h1>
       </div>
       <div className="form-row">
         <input
@@ -216,8 +183,6 @@ const PurchaseModal = ({ className, isOpen, closeModal, stripe }) => {
         </p>
       </div>
       <div>
-        <button onClick={e => setPaymentComplete(false)}>Buy Again!</button>{" "}
-        &nbsp;
         <input
           type="button"
           onClick={resetSuccessAndCloseModal}
@@ -241,7 +206,7 @@ const PurchaseModal = ({ className, isOpen, closeModal, stripe }) => {
   )
 }
 
-const StyledPurchaseModal = styled(PurchaseModal)`
+const StyledPrintPurchaseModal = styled(PrintPurchaseModal)`
   .form-row {
     display: flex;
     flex-direction: column;
@@ -407,4 +372,4 @@ const StyledPurchaseModal = styled(PurchaseModal)`
   }
 `
 
-export default injectStripe(StyledPurchaseModal)
+export default injectStripe(StyledPrintPurchaseModal)
