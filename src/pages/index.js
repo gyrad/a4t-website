@@ -13,6 +13,9 @@ import SEO from "../components/seo"
 
 import hhdl from "../images/hhdl.jpg"
 import monksArt from "../images/monks-art.jpeg"
+import promo1 from "../images/a4t2019-promo-1.jpg"
+import promo2 from "../images/a4t2019-promo-2.jpg"
+import promo3 from "../images/a4t2019-promo-3.jpg"
 
 const IndexPage = ({ path }) => {
   useEffect(() => {
@@ -95,6 +98,19 @@ const IndexPage = ({ path }) => {
           </p>
         </div>
       </IntroTextContainer>
+
+      <PromoWrapper>
+        <div>
+          <img src={promo1} alt="1" />
+        </div>
+        <div>
+          <img src={promo2} alt="2" />
+        </div>
+        <div>
+          <img src={promo3} alt="3" />
+        </div>
+      </PromoWrapper>
+
       <CountdownSection>
         <CountdownContainer>
           <p style={{ fontSize: "1.2rem" }}>
@@ -139,6 +155,34 @@ const IndexPage = ({ path }) => {
   )
 }
 
+const PromoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
+  justify-content: space-evenly;
+  margin: 2.5rem 0;
+  align-items: center;
+
+  div {
+    width: 90%;
+    margin-bottom: 1rem;
+    @media (min-width: 600px) {
+      width: 30%;
+    }
+    img {
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.4s, transform 0.4s;
+
+      :hover {
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+        transform: translateY(-2px);
+      }
+    }
+  }
+`
+
 const IntroTextContainer = styled(Container)`
   display: block;
   margin-bottom: 1.5rem;
@@ -156,7 +200,7 @@ const IntroTextContainer = styled(Container)`
       width: 180px;
       opacity: 0.5;
       height: auto;
-      filter: blur(5px);
+      filter: blur(7px);
     }
   }
   .image-wrapper {
@@ -164,7 +208,7 @@ const IntroTextContainer = styled(Container)`
     padding: 0;
     margin-right: 0;
     @media (min-width: 600px) {
-      padding: 1.5rem;
+      padding: 1rem;
     }
     @media (min-width: 1000px) {
       margin-right: 1rem;

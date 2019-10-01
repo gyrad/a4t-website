@@ -23,6 +23,23 @@ const ArtistPage = () => {
             />
           </HeaderImageWrapper>
           <Intro>
+            <svg
+              width="290"
+              height="251"
+              viewBox="0 0 290 251"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M220.692 131.433L290 251H151.384L220.692 131.433Z"
+                fill="#F299C1"
+              />
+              <path d="M145 0L213.852 120.024H75.6918L145 0Z" fill="#FDF49B" />
+              <path
+                d="M69.3082 131.433L138.16 251H0L69.3082 131.433Z"
+                fill="#6ECEF5"
+              />
+            </svg>
             <p>
               Albert Diaz, Alex Bershaw, Ana Maria Velasco Lacayo, Aiko Fukuda,
               Andrew Kennedy, Anna Mogilevsky, Anna Grun, Ariel Basson Freiberg,
@@ -43,7 +60,6 @@ const ArtistPage = () => {
         </IntroWrapper>
       </Container>
 
-      <PurchaseCard />
       <Container>
         <h2>We thank all Art for Tibet artists for their generous support!</h2>
         <p style={{ fontSize: ".8rem" }}>
@@ -117,6 +133,7 @@ const ArtistPage = () => {
           Zilber, Yuri Shimojo, Yvonne Jacquette.
         </p>
       </Container>
+      <PurchaseCard />
     </Layout>
   )
 }
@@ -132,16 +149,29 @@ const IntroWrapper = styled.div`
 
 const Intro = styled.div`
   flex: 5;
+  position: relative;
+
+  svg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 180px;
+    opacity: 0.5;
+    height: auto;
+    filter: blur(7px);
+  }
 `
 
 const HeaderImageWrapper = styled.div`
   flex: 2;
-  margin-left: 0;
+  margin-right: 0;
   padding: 1.5rem 0;
-  order: 2;
+  order: 1;
   @media (min-width: 600px) {
-    padding: 1.5rem;
-    margin-left: 1rem;
+    padding: 1rem;
+    margin-right: 1rem;
+    order: 0;
   }
   img {
     width: 100%;

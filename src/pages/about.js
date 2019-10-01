@@ -87,6 +87,7 @@ const IntroContainer = styled.div`
     @media (min-width: 600px) {
       margin-left: 0;
       flex: 3;
+      padding: 1rem;
     }
     @media (min-width: 1000px) {
       margin-left: 1rem;
