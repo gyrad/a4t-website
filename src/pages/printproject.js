@@ -18,15 +18,16 @@ const PrintProjectPage = () => {
       <Container>
         <h1>Print Project</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt minus
-          beatae molestiae, harum hic pariatur quis suscipit incidunt velit quos
-          tempore unde cum nesciunt, tenetur quaerat labore, dolor expedita quas
-          sit fugit fuga iure neque dolore. Autem, consequatur veniam voluptatem
-          similique recusandae rerum, eveniet reiciendis quidem in nemo ullam
-          minus dolorum eaque at. Vero a tenetur nemo rerum libero culpa animi
-          quisquam nulla, asperiores delectus doloremque quibusdam quam velit
-          harum, aliquam labore similique, obcaecati reprehenderit accusamus!
-          Corrupti reiciendis quod illum?
+          In celebration of the 9th annual Art for Tibet benefit and group
+          exhibit this November, Art for Tibet collaborated with some of our
+          favorite artists, including Cey Adams, Choichun Leung, Juan Carlos
+          Pinto, and emerging Tibetan graphic designer Tsewang Lhamo, to produce
+          a series of limited edition prints exclusive to Art for Tibet. 100% of
+          the sale price from these affordable, limited edition prints will
+          directly benefit the activism and campaigns work of Students for a
+          Free Tibet. These prints are on sale online now through November 7th
+          2019. The prints will also be available for sale at Faction Arts
+          Gallery during the exhibit, November 2-7.
         </p>
 
         <PrintProjectCardsWrapper>
@@ -53,6 +54,18 @@ const PrintProjectPage = () => {
           >
             <p>16” x 20”</p>
             <p>Digital Print</p>
+          </PrintProjectCard>
+          <PrintProjectCard
+            image={theThreeGracesChoichun}
+            title="The Three Graces"
+            artist="Choichun Leung"
+            skuId={process.env.GATSBY_SKU_ARTWORK_THE_THREE_GRACES}
+            total="43.00"
+            quantity="30"
+          >
+            <p>13” x 16”</p>
+            <p>Giclee on archival paper</p>
+            <p>30 Prints</p>
           </PrintProjectCard>
           <PrintProjectCard
             image={theThreeGracesChoichun}
