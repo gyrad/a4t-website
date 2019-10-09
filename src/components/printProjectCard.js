@@ -1,25 +1,21 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { Elements } from "react-stripe-elements"
 
-import BiographyModal from "../components/biographyModal"
-import PrintPurchaseModal from "../components/printPurchaseModal"
+import BiographyModal from "./biographyModal"
 
 const PrintProjectCard = ({
   className,
   image,
   title,
   artist,
-  skuId,
+  id,
   total,
   quantity,
   children,
+  addToCart,
 }) => {
   const [bio, setBio] = useState("")
   const [biographyModalIsOpen, setBiographyModalIsOpen] = useState(false)
-  const [printPurchaseModalIsOpen, setPrintPurchaseModalIsOpen] = useState(
-    false
-  )
 
   const openBioModal = artist => {
     setBiographyModalIsOpen(true)
@@ -126,8 +122,32 @@ const PrintProjectCard = ({
           <p>‘The Young Girl Project’ is now a non-profit organization.</p>
         </div>
       )
+    } else if (artist === "Karma Phuntsok") {
+      setBio(
+        <div>
+          <h1>{artist}</h1>
+          <p>
+            Karma Phuntsok fled Tibet with his family after the uprising against
+            the Chinese in 1959, escaping into India as refugees. He studied
+            drawing and painting through his school years in India. In 1973
+            Karma studied thanka painting with a master of traditional Tibetan
+            thanka painting in Nepal. Since then he has been making paintings
+            based on Tibetan Buddhist deities.
+          </p>
+          <p>
+            In 1981 Karma migrated to Australia and now lives in the bush north
+            of Kyogle with his wife and son.
+          </p>
+          <p>
+            Karma's paintings are collected worldwide and published in various
+            books and magazines. His recent paintings are mostly experiments,
+            interweaving traditional techniques and symbols, with modern
+            inspirations.
+          </p>
+        </div>
+      )
     } else {
-      setBio(`<p>Can't find artist bio.</p>`)
+      setBio(<p>Artist bio not available.</p>)
     }
   }
 
@@ -146,12 +166,23 @@ const PrintProjectCard = ({
         {children}
       </div>
       <div className="btn-wrapper">
-        <button onClick={() => setPrintPurchaseModalIsOpen(true)}>
-          Buy Now!
+        <button
+          onClick={() =>
+            addToCart({
+              title,
+              artist,
+              id,
+              total,
+              quantity: 1,
+            })
+          }
+        >
+          Add to Cart
         </button>
-        <p className="free-shipping-info">
-          ** {quantity} prints for ${total} each. <br />
-          Free shipping worldwide.
+        <p className="shipping-info">
+          * ${total} each + shipping
+          <br />
+          <strong>Shipping:</strong> US: $10&nbsp; Int: $15
         </p>
       </div>
 
@@ -160,21 +191,12 @@ const PrintProjectCard = ({
         closeModal={() => setBiographyModalIsOpen(false)}
         bio={bio}
       />
-      <Elements>
-        <PrintPurchaseModal
-          isOpen={printPurchaseModalIsOpen}
-          closeModal={() => setPrintPurchaseModalIsOpen(false)}
-          skuId={skuId}
-          title={title}
-          total={total}
-        />
-      </Elements>
     </div>
   )
 }
 
 const StyledPrintProjectCard = styled(PrintProjectCard)`
-  margin: 1rem 0;
+  margin: 1.5rem 0.75rem;
   flex: 0 0 100%;
   @media (min-width: 600px) {
     flex: 0 0 49%;
@@ -224,13 +246,17 @@ const StyledPrintProjectCard = styled(PrintProjectCard)`
   .btn-wrapper {
     margin-top: 1rem;
     display: flex;
-    .free-shipping-info {
-      color: #aaa;
-      font-style: italic;
-      line-height: 1.2;
-      margin-left: 1rem;
-      margin-top: 2px;
+    button {
+      flex: 1;
     }
+  }
+
+  .shipping-info {
+    color: #aaa;
+    font-style: italic;
+    line-height: 1.2;
+    margin-left: 1rem;
+    margin-top: 2px;
   }
 `
 
