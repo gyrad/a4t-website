@@ -1,3 +1,9 @@
 [build]
   functions = "lambda"
   build = "npm run prod"
+
+# Using following lines to let clientside redirects take over.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
