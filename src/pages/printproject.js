@@ -92,8 +92,9 @@ const PrintProjectPage = () => {
             quantity="35"
             addToCart={addToCart}
           >
-            <p>16” x 20”</p>
-            <p>Digital Print</p>
+            <p>18” x 24”</p>
+            <p>Fine Art Digital Prints</p>
+            <p>Archival Ink on Enhanced Matte Paper</p>
             <p>35 Prints signed</p>
           </PrintProjectCard>
 
@@ -106,8 +107,8 @@ const PrintProjectPage = () => {
             quantity="25"
             addToCart={addToCart}
           >
-            <p>13” x 16”</p>
-            <p>Giclee on archival paper</p>
+            <p>Unframed 16” x 13”</p>
+            <p>Archival Pigment Print on acid free paper</p>
             <p>25 Prints signed</p>
           </PrintProjectCard>
 
@@ -120,7 +121,9 @@ const PrintProjectPage = () => {
             quantity="25"
             addToCart={addToCart}
           >
-            <p>16” x 20”</p>
+            <p>18” x 24”</p>
+            <p>Fine Art Digital Prints</p>
+            <p>Archival Ink on Enhanced Matte Paper</p>
             <p>25 Prints unsigned</p>
           </PrintProjectCard>
 
@@ -134,7 +137,8 @@ const PrintProjectPage = () => {
             addToCart={addToCart}
           >
             <p>16” x 20”</p>
-            <p>Silk Screen Print</p>
+            <p>Silkscreen Prints</p>
+            <p>Acrylic on Heavyweight Fine Art Poster Paper</p>
             <p>25 Prints signed</p>
           </PrintProjectCard>
         </PrintProjectCardsWrapper>

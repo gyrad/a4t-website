@@ -572,7 +572,7 @@ const StyledPrintPurchaseModal = styled(PrintPurchaseModal)`
     &--footer {
       margin-top: 0.5rem;
       padding-top: 1rem;
-      align-items: flex-start;
+      align-items: flex-end;
       flex-direction: row;
 
       .total {
@@ -583,6 +583,10 @@ const StyledPrintPurchaseModal = styled(PrintPurchaseModal)`
         span {
           font-size: 0.8rem;
         }
+      }
+
+      input {
+        margin-bottom: 0 !important;
       }
     }
 

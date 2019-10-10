@@ -21,18 +21,25 @@ const Footer = ({ className }) => {
           <div>
             <p>
               <strong>ART FOR TIBET</strong> was founded in 2009. All proceeds
-              from the auction support Students for a Free Tibet (SFT), a
-              501(c)3 global grassroots network that campaigns for Tibetan
-              freedom and human rights. ART FOR TIBET raises critical funds that
-              enable SFT to carry out its urgent mission. SFT works in
-              solidarity with the Tibetan people in their struggle for freedom
-              and independence.
+              from the auction support{" "}
+              <a href="https://studentsforafreetibet.org">
+                Students for a Free Tibet
+              </a>{" "}
+              (SFT), a 501(c)3 global grassroots network that campaigns for
+              Tibetan freedom and human rights. ART FOR TIBET raises critical
+              funds that enable SFT to carry out its urgent mission. SFT works
+              in solidarity with the Tibetan people in their struggle for
+              freedom and independence.
             </p>
           </div>
           <div>
             <p>
               <i className="fas fa-map-marked-alt"></i>{" "}
-              <strong>STUDENTS FOR A FREE TIBET</strong>
+              <strong>
+                <a href="https://studentsforafreetibet.org">
+                  STUDENTS FOR A FREE TIBET
+                </a>
+              </strong>
             </p>
             <p>
               602 East 14<sup>th</sup> Street (2<sup>nd</sup> Floor) <br />
@@ -105,6 +112,10 @@ const StyledFooter = styled(Footer)`
             flex: 2;
           }
         }
+      }
+
+      a {
+        color: white;
       }
     }
   }

@@ -63,6 +63,11 @@ const Navigation = ({ className }) => {
             About
           </Link>
         </li>
+        <li>
+          <Link to="/printproject/" activeClassName="active-link">
+            Print Project
+          </Link>
+        </li>
         <div className="sm-icons">
           <hr />
           <a
