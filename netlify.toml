@@ -5,5 +5,5 @@
 # Using following lines to let clientside redirects take over.
 [[redirects]]
   from = "/*"
-  to = "/printproject"
+  to = "/404"
   status = 200
