@@ -78,7 +78,7 @@ const PrintProjectPage = () => {
             quantity="50"
             addToCart={addToCart}
           >
-            <p>24” x 18”</p>
+            <p>Unframed 24” x 18”</p>
             <p>6 color silkscreen print on 100 lb, Acid Free Paper</p>
             <p>Signed by Cey Adams. Numbered Edition of 50</p>
             <p>2019</p>
@@ -92,7 +92,7 @@ const PrintProjectPage = () => {
             quantity="35"
             addToCart={addToCart}
           >
-            <p>18” x 24”</p>
+            <p>Unframed 18” x 24”</p>
             <p>Fine Art Digital Prints</p>
             <p>Archival Ink on Enhanced Matte Paper</p>
             <p>35 Prints signed</p>
@@ -121,7 +121,7 @@ const PrintProjectPage = () => {
             quantity="25"
             addToCart={addToCart}
           >
-            <p>18” x 24”</p>
+            <p>Unframed 18” x 24”</p>
             <p>Fine Art Digital Prints</p>
             <p>Archival Ink on Enhanced Matte Paper</p>
             <p>25 Prints unsigned</p>
@@ -136,7 +136,7 @@ const PrintProjectPage = () => {
             quantity="25"
             addToCart={addToCart}
           >
-            <p>16” x 20”</p>
+            <p>Unframed 16” x 20”</p>
             <p>Silkscreen Prints</p>
             <p>Acrylic on Heavyweight Fine Art Poster Paper</p>
             <p>25 Prints signed</p>
