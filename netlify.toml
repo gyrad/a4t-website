@@ -4,6 +4,6 @@
 
 # Using following lines to let clientside redirects take over.
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/printproject"
+  to = "/printproject"
   status = 200
