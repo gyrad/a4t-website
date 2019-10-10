@@ -207,8 +207,8 @@ const PurchaseModal = ({ className, isOpen, closeModal, stripe }) => {
         <h1>Payment Successful!</h1>
         <p>
           Thank you for your purchase! You should be receiving your item in the
-          mail very soon! We have emailed you a copy of your invoice for your
-          records to the email address you provided.
+          mail very soon! We will send you an email of your receipt once our
+          staff has confirmed your purchase on our end.
         </p>
         <p>
           Thank you once again, from all of us here at Art for Tibet!{" "}
