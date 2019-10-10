@@ -92,7 +92,7 @@ const PrintProjectPage = () => {
             quantity="35"
             addToCart={addToCart}
           >
-            <p>Unframed 18” x 24”</p>
+            <p>Unframed 10” x 20”</p>
             <p>Fine Art Digital Prints</p>
             <p>Archival Ink on Enhanced Matte Paper</p>
             <p>35 Prints signed</p>
