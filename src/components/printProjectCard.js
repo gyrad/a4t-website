@@ -146,6 +146,19 @@ const PrintProjectCard = ({
           </p>
         </div>
       )
+    } else if (artist === "Tsewang Lhamo") {
+      setBio(
+        <p>
+          Tsewang Lhamo is a graphic design student at Baruch College in New
+          York City. She was born in Nepal but grew up in South India. She is
+          influenced by pop art particularly Paula Scher and Andy Warhol her
+          Tibetan diaspora experience is also a source of inspiration. Tsewang
+          is the co-founder of Yakpo Collective. An art collective dedicated to
+          the Tibetan contemporary art movement and culture. Aside from graphic
+          design, she enjoys photography and painting and hopes to launch a
+          sustainable clothing brand some day.
+        </p>
+      )
     } else {
       setBio(<p>Artist bio not available.</p>)
     }
