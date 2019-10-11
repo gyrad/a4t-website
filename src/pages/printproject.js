@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import { Container } from "../components/layoutComponents"
 import PrintProjectCard from "../components/printProjectCard"
 import SEO from "../components/seo"
+import PurchaseCard from "../components/purchaseCard"
 
 import loveCeyAdams from "../images/love-ceyadams.jpg"
 import metrocardCarlos from "../images/metrocard-carlos.jpg"
@@ -150,6 +151,8 @@ const PrintProjectPage = () => {
             <strong>artfortibet@studentsforafreetibet.org</strong>
           </p>
         </InfoCard>
+
+        <PurchaseCard />
       </Container>
 
       <Cart
