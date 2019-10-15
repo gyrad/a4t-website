@@ -59,6 +59,28 @@ const AboutPage = () => {
               Committee members for 2018: Jonathan Hulland, Alex Bershaw, Pema
               Yoko, and Tenzin Dorjee.
             </p>
+
+            <h2>Art for Tibet in the news:</h2>
+            <ul>
+              <li>
+                <a
+                  href="https://www.artfixdaily.com/artwire/release/7409-art-for-tibet-presents-exhibition-and-9th-annual-new-york-auction"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ARTFIX Daily
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://fadmagazine.com/2019/10/11/students-for-a-free-tibet-announce-the-9th-annual-art-for-tibet-benefit-auction-and-exhibition/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  FAD Magazine
+                </a>
+              </li>
+            </ul>
           </div>
           <Container className="video">
             <video controls src={a4tVideo} poster={a4tVideoLogo}>
