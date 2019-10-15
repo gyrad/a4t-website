@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 
 import a4tVideo from "../videos/a4t-promo.mp4"
 import a4tVideoLogo from "../images/a4t2019-squarelogo.svg"
+import hhdl from "../images/hhdl.jpg"
 
 const AboutPage = () => {
   return (
@@ -66,10 +67,49 @@ const AboutPage = () => {
           </Container>
         </IntroContainer>
       </Container>
+
+      <Container vpadding="3">
+        <Quote>
+          “The achievements of Students for a Free Tibet show that nonviolent
+          action does work.”
+        </Quote>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            padding: ".5rem 0",
+          }}
+        >
+          <img
+            src={hhdl}
+            alt="His Holiness the Dalai Lama"
+            style={{
+              width: 70,
+              height: 70,
+              borderRadius: "50%",
+            }}
+          />
+        </div>
+        <p style={{ fontSize: ".9rem", textAlign: "center", color: "#888" }}>
+          &mdash; His Holiness the 14<sup>th</sup> Dalai Lama
+        </p>
+      </Container>
+
       <PurchaseCard />
     </Layout>
   )
 }
+
+const Quote = styled.p`
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  line-height: 1.4;
+  font-size: 1.4rem;
+  @media (min-width: 600px) {
+    font-size: 2.2rem;
+  }
+`
 
 const IntroContainer = styled.div`
   display: block;

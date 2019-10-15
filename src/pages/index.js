@@ -12,7 +12,7 @@ import { Section, Container } from "../components/layoutComponents"
 import PurchaseCard from "../components/purchaseCard"
 import SEO from "../components/seo"
 
-import hhdl from "../images/hhdl.jpg"
+import shepardFairey from "../images/shepard_fairey.jpg"
 import monksArt from "../images/monks-art.jpeg"
 import promo1 from "../images/a4t2019-promo-1.jpg"
 import promo2 from "../images/a4t2019-promo-2.jpg"
@@ -135,10 +135,14 @@ const IndexPage = ({ path }) => {
       <PurchaseCard />
 
       <Container vpadding="3">
-        <HHDLQuote>
-          “The achievements of Students for a Free Tibet show that nonviolent
-          action does work.”
-        </HHDLQuote>
+        <Quote>
+          “I’ve been a longtime supporter of Students for a Free Tibet because
+          of the work they do to help the Tibetan people gain political
+          independence and freedom. I believe in the power of nonviolent,
+          grassroots movements to create change, and I will continue to advocate
+          for the human rights of Tibetans through my voice and through my art.
+          Free Tibet!”
+        </Quote>
         <div
           style={{
             display: "flex",
@@ -147,8 +151,8 @@ const IndexPage = ({ path }) => {
           }}
         >
           <img
-            src={hhdl}
-            alt="His Holiness the Dalai Lama"
+            src={shepardFairey}
+            alt="Shepard Fairey"
             style={{
               width: 70,
               height: 70,
@@ -157,7 +161,7 @@ const IndexPage = ({ path }) => {
           />
         </div>
         <p style={{ fontSize: ".9rem", textAlign: "center", color: "#888" }}>
-          &mdash; His Holiness the 14<sup>th</sup> Dalai Lama
+          &mdash; Shepard Fairey
         </p>
       </Container>
     </Layout>
@@ -253,14 +257,14 @@ const CountdownContainer = styled(Container)`
   }
 `
 
-const HHDLQuote = styled.p`
+const Quote = styled.p`
   font-weight: bold;
   text-align: center;
   color: #333;
   line-height: 1.4;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   @media (min-width: 600px) {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 `
 
