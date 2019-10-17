@@ -58,7 +58,8 @@ const ArtistPage = () => {
               Dorji, Shinya Kato, Stanley Donwood, Steve Cogle, Tashi Norbu,
               Tenzin Choeyang, Tenzin Kelsang, Tenzin Nyima, Tenzin Phakmo,
               Tenzin Tsering Chosank, Tenzing Rabyang, Tenzing Tashi, Tenzoni
-              Tsering, Tsewang Lhamo, Yen Chua, Yoni Zilber, Yuvak Tuladhar.
+              Tsering, Tsewang Lhamo, Tsultrim Tenzin, Yen Chua, Yoni Zilber,
+              Yuvak Tuladhar.
             </p>
           </Intro>
         </IntroWrapper>
