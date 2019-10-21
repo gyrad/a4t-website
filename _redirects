@@ -1,0 +1,6 @@
+# Redirect domain aliases to primary domain
+https://artfortibet.com/* https://www.artfortibet.org/:splat 301!
+https://www.artfortibet.com/* https://www.artfortibet.org/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://quirky-bartik-8b172f.netlify.com/* https://www.artfortibet.org/:splat 301!
