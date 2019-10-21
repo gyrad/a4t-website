@@ -7,3 +7,10 @@
   from = "/*"
   to = "/404"
   status = 200
+
+# Redirect .com to .org
+[[redirects]]
+  from = "https://artfortibet.com"
+  to = "https://artfortibet.org"
+  status = 301
+  force = true
