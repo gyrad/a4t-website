@@ -10,7 +10,28 @@
 
 # Redirect .com to .org
 [[redirects]]
-  from = "https://artfortibet.com"
-  to = "https://artfortibet.org"
+  from = "http://artfortibet.com/*"
+  to = "https://artfortibet.org/:splat"
+  status = 301
+  force = true
+
+# Redirect .com to .org
+[[redirects]]
+  from = "https://artfortibet.com/*"
+  to = "https://artfortibet.org/:splat"
+  status = 301
+  force = true
+
+# Redirect .com to .org
+[[redirects]]
+  from = "http://www.artfortibet.com/*"
+  to = "https://artfortibet.org/:splat"
+  status = 301
+  force = true
+
+# Redirect .com to .org
+[[redirects]]
+  from = "https://www.artfortibet.com/*"
+  to = "https://artfortibet.org/:splat"
   status = 301
   force = true
