@@ -87,23 +87,38 @@ const IndexPage = ({ path }) => {
               fill="#6ECEF5"
             />
           </svg>
-          <h1>Art for Tibet 2019</h1>
+          {/* <h1>Art for Tibet 2019</h1> */}
           <p>
-            We are thrilled to announce that legendary NYC hip-hop artist &
-            Beastie Boys collaborator <strong>Cey Adams</strong> and
-            French-Tibetan painter <strong>Marie-Dolma Chophel</strong> have
-            joined this year’s Honorary Committee alongside returning members{" "}
+            This year Art for Tibet are thrilled to announce that legendary NYC
+            hip-hop artist & Beastie Boys collaborator{" "}
+            <strong>Cey Adams</strong> and French-Tibetan painter{" "}
+            <strong>Marie-Dolma Chophel</strong> have joined this year’s
+            Honorary Committee alongside returning members{" "}
             <strong>Shepard Fairey</strong> and Columbia Professor of
-            Indo-Tibetan Studies <strong>Robert Thurman</strong>.
+            Indo-Tibetan Studies, <strong>Robert Thurman</strong>.
           </p>
-
           <p>
-            Together with the Honorary Committee, we the Organizing Committee
-            invites you to celebrate resistance, freedom and art with us as a
-            contributing artist to this year’s Art for Tibet. Art for Tibet is
-            Students for a Free Tibet’s (SFT) most important annual fundraiser,
-            which enables SFT to continue its fight for the Tibetan people’s
-            fundamental human rights and freedom.
+            For the first time, an exhibition will run in tandem with the
+            auction at the prestigious <strong>Gallery 8</strong> in Harlem,
+            giving a chance for extraordinary Tibetan artists to be showcased
+            alongside leading contemporary artists for an extended period of
+            time. An online auction will also run from{" "}
+            <strong>October 25 – November 7 2019</strong>. The live auction will
+            take place on <strong>Thursday November 7</strong> and will be
+            accompanied by a drinks reception and a performance from Tibetan
+            musician and composer <strong>Tenzin Choegyal</strong>.
+          </p>
+          <p>
+            American contemporary street artist, graphic designer, activist, and
+            illustrator Shepard Fairey says:{" "}
+            <em>
+              “I've been a longtime supporter of Students for a Free Tibet
+              because of the work they do to help the Tibetan people gain
+              political independence and freedom. I believe in the power of
+              nonviolent, grassroots movements to create change, and I will
+              continue to advocate for the human rights of Tibetans through my
+              voice and through my art. Free Tibet!"
+            </em>
           </p>
         </div>
       </IntroTextContainer>
@@ -228,7 +243,7 @@ const IntroTextContainer = styled(Container)`
     }
     img {
       width: 100%;
-      height: 300px;
+      height: auto;
       object-fit: cover;
       box-shadow: 0 5px 18px rgba(0, 0, 0, 0.4);
     }
