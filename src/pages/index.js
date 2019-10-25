@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import anime from "animejs/lib/anime.es"
 import styled from "styled-components"
-import { Link } from "gatsby"
 
 import Countdown from "../components/countdown"
 import EmailSignup from "../components/emailSignup"
@@ -17,7 +16,7 @@ import monksArt from "../images/monks-art.jpeg"
 import promo1 from "../images/a4t2019-promo-1.jpg"
 import promo2 from "../images/a4t2019-promo-2.jpg"
 import promo3 from "../images/a4t2019-promo-3.jpg"
-import ppSale from "../images/ppsale.svg"
+import bidNowBanner from "../images/bidnowbanner.svg"
 
 const IndexPage = ({ path }) => {
   useEffect(() => {
@@ -60,9 +59,13 @@ const IndexPage = ({ path }) => {
       <EmailSignup />
 
       <Container>
-        <Link to="/printproject/">
-          <img src={ppSale} alt="Art for Tibet: Print Project sale on now!" />
-        </Link>
+        <a
+          href="https://benefitevents.com/auctions/sft2019/catalog.asp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={bidNowBanner} alt="Art for Tibet: Bid now!" />
+        </a>
       </Container>
 
       <IntroTextContainer>
