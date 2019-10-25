@@ -68,6 +68,15 @@ const Navigation = ({ className }) => {
             Print Project
           </Link>
         </li>
+        <li>
+          <a
+            href="https://benefitevents.com/auctions/sft2019/catalog.asp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Bid Now!
+          </a>
+        </li>
         <div className="sm-icons">
           <hr />
           <a
