@@ -148,16 +148,62 @@ const PrintProjectCard = ({
       )
     } else if (artist === "Tsewang Lhamo") {
       setBio(
-        <p>
-          Tsewang Lhamo is a graphic design student at Baruch College in New
-          York City. She was born in Nepal but grew up in South India. She is
-          influenced by pop art particularly Paula Scher and Andy Warhol her
-          Tibetan diaspora experience is also a source of inspiration. Tsewang
-          is the co-founder of Yakpo Collective. An art collective dedicated to
-          the Tibetan contemporary art movement and culture. Aside from graphic
-          design, she enjoys photography and painting and hopes to launch a
-          sustainable clothing brand some day.
-        </p>
+        <div>
+          <h1>{artist}</h1>
+          <p>
+            Tsewang Lhamo is a graphic design student at Baruch College in New
+            York City. She was born in Nepal but grew up in South India. She is
+            influenced by pop art particularly Paula Scher and Andy Warhol her
+            Tibetan diaspora experience is also a source of inspiration. Tsewang
+            is the co-founder of Yakpo Collective. An art collective dedicated
+            to the Tibetan contemporary art movement and culture. Aside from
+            graphic design, she enjoys photography and painting and hopes to
+            launch a sustainable clothing brand some day.
+          </p>
+        </div>
+      )
+    } else if (artist === "Jon Marro") {
+      setBio(
+        <div>
+          <h1>{artist}</h1>
+
+          <p>
+            In Marro's own words, his art is meant to be 'a sanctuary for the
+            eyes'. The images are inspired by the environment, the natural world
+            and a strong and a deep spiritual dimension. He builds up his
+            subjects through a thick accumulation of lines and a rich and bright
+            use of color. With incredible attention to detail, his works share
+            something with psychedelic art, but also release a sense of calm and
+            harmony. Through his artistic practice, Marro has learned to
+            treasure patience and diligence.
+          </p>
+          <p>
+            The artist started his creative path as the founder of Blend
+            Apparel, a company that produces T-shirts in an ethically
+            responsible way, and also founded his studio Fire Hydrant.
+            Meanwhile, he worked as a designer creating works for fellow
+            musicians, and illustrating books and posters for movies.
+          </p>
+          <p>
+            After leaving Blend Apparel in 2011, Marro has focused on what he
+            calls Solar Art, a creative practice driven by his deep commitment
+            with the sacred force of love.
+          </p>
+          <p>
+            Considering that Marro says 'my absolute medium is Spirit', it does
+            not come as a surprise that he also leads transformational workshops
+            all over the world.
+          </p>
+          <p>
+            <a
+              href="http://jonmarro.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              jonmarro.com
+            </a>
+          </p>
+        </div>
       )
     } else {
       setBio(<p>Artist bio not available.</p>)
