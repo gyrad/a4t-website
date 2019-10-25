@@ -43,23 +43,22 @@ const ArtistPage = () => {
             <p>
               Albert Diaz, Alex Bershaw, Ana Maria Velasco Lacayo, Aiko Fukuda,
               Andrew Kennedy, Anna Mogilevsky, Anna Grun, Ariel Basson Freiberg,
-              Boy Kong, Chris Bartlett, Chris Schwartz, Christian Mendoza, Craig
-              Anthony Miller, Cey Adams, Choichun Leung, Chungpo Rigtselwa,
-              Damion Silver, Emma Goodman O'Rourke, Eric Inkala, Grimace, Gyatso
-              Chuteng, Irina Fialco, Jacob Saccone, James Stanford, Jondix, Jon
-              Marro, Juan Carlos Pinto, Kalsang Tsultim, Karen Zilly, Kesang
-              Lamdark, Kenzo Minami, Kenji Hirata, Kimyon, Karma Phuntsok,
-              Khenzom Alling, Lorie Caval, Li Hill, Magda Dejose, Maya Hayuk,
-              Marthalicia Matarrita, Melodie Provenzano, Marie-Dolma Chophel,
-              Michela Muserra, Miguel Ovalle, Mike Schreiber, Minzaya Oo, Mohsen
-              Dinali, Noah Tavlin, Ngawang Jorden, Otavio Henriquez, Palden
-              Weinreb, Patrick Dougher, Pema Rinzin, Pete Speller, Rima Fujita,
-              Rubén Salgado Escudero, Sogan Rinpoche, Shepard Fairey, Sherab
-              Dorji, Shinya Kato, Stanley Donwood, Steve Cogle, Tashi Norbu,
-              Tenzin Choeyang, Tenzin Kelsang, Tenzin Nyima, Tenzin Phakmo,
-              Tenzin Tsering Chosank, Tenzing Rabyang, Tenzing Tashi, Tenzoni
-              Tsering, Tsewang Lhamo, Tsultrim Tenzin, Yen Chua, Yoni Zilber,
-              Yuvak Tuladhar.
+              Boy Kong, Chris Bartlett, Chris Schwartz, Christian Mendoza, Cey
+              Adams, Choichun Leung, Chungpo Rigtselwa, Damion Silver, Emma
+              Goodman O'Rourke, Eric Inkala, Grimace, Gyatso Chuteng, Irina
+              Fialco, Jacob Saccone, James Stanford, Jondix, Jon Marro, Juan
+              Carlos Pinto, Kalsang Tsultim, Karen Zilly, Kesang Lamdark, Kenzo
+              Minami, Kenji Hirata, Kimyon, Karma Phuntsok, Khenzom Alling,
+              Lorie Caval, Li Hill, Magda Dejose, Maya Hayuk, Marthalicia
+              Matarrita, Melodie Provenzano, Marie-Dolma Chophel, Michela
+              Muserra, Miguel Ovalle, Mike Schreiber, Minzaya Oo, Mohsen Dinali,
+              Noah Tavlin, Ngawang Jorden, Otavio Henriquez, Palden Weinreb,
+              Patrick Dougher, Pema Rinzin, Pete Speller, Rima Fujita, Rubén
+              Salgado Escudero, Sogan Rinpoche, Shepard Fairey, Sherab Dorji,
+              Shinya Kato, Stanley Donwood, Steve Cogle, Tashi Norbu, Tenzin
+              Choeyang, Tenzin Kelsang, Tenzin Nyima, Tenzin Phakmo, Tenzing
+              Rabyang, Tenzing Tashi, Tenzoni Tsering, Tsewang Lhamo, Tsultrim
+              Tenzin, Yen Chua, Yoni Zilber, Yuvak Tuladhar.
             </p>
           </Intro>
         </IntroWrapper>
