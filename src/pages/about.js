@@ -80,6 +80,60 @@ const AboutPage = () => {
                   FAD Magazine
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://www.harlemonestop.com/event/28419/9th-annual-art-for-tibet-benefit-auction-and-exhibition"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Harlem One Stop
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://observer.com/2019/10/art-for-tibet-auction-exhibition-shepard-fairey/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Observer
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://hypebeast.com/2019/10/art-for-tibet-exhibition-auction-new-york"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Hypebeast
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.artandobject.com/news/annual-art-tibet-auction-raises-funds-and-awareness"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Art and Object
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.artrabbit.com/events/art-for-tibet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Art Rabbit
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://www.digital.nyc/events/art-tibet-exhibition"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Digital NYC
+                </a>
+              </li>
             </ul>
           </div>
           <Container className="video">
