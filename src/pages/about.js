@@ -61,7 +61,7 @@ const AboutPage = () => {
             </p>
 
             <h2>Art for Tibet in the news:</h2>
-            <ul>
+            <ul style={{ columns: 2 }}>
               <li>
                 <a
                   href="https://www.artfixdaily.com/artwire/release/7409-art-for-tibet-presents-exhibition-and-9th-annual-new-york-auction"
