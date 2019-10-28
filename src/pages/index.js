@@ -138,7 +138,7 @@ const IndexPage = ({ path }) => {
         </div>
       </PromoWrapper>
 
-      <CountdownSection>
+      {/* <CountdownSection>
         <CountdownContainer>
           <p style={{ fontSize: "1.2rem" }}>
             Online Bidding Starts{" "}
@@ -148,7 +148,7 @@ const IndexPage = ({ path }) => {
           </p>
           <Countdown />
         </CountdownContainer>
-      </CountdownSection>
+      </CountdownSection> */}
 
       <PurchaseCard />
 
