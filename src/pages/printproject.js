@@ -78,6 +78,7 @@ const PrintProjectPage = () => {
             total="100.00"
             quantity="50"
             addToCart={addToCart}
+            isSoldOut={true}
           >
             <p>Unframed 24” x 18”</p>
             <p>6 color silkscreen print on 100 lb, Acid Free Paper</p>

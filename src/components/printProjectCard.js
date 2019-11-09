@@ -13,6 +13,7 @@ const PrintProjectCard = ({
   quantity,
   children,
   addToCart,
+  isSoldOut,
 }) => {
   const [bio, setBio] = useState("")
   const [biographyModalIsOpen, setBiographyModalIsOpen] = useState(false)
@@ -235,8 +236,9 @@ const PrintProjectCard = ({
               quantity: 1,
             })
           }
+          disabled={isSoldOut ? true : false}
         >
-          Add to Cart
+          {isSoldOut ? "Sold out!" : "Add to Cart"}
         </button>
         <p className="shipping-info">
           * ${total} each + shipping
@@ -262,6 +264,12 @@ const StyledPrintProjectCard = styled(PrintProjectCard)`
   }
   @media (min-width: 1000px) {
     flex: 0 0 31%;
+  }
+
+  button:disabled {
+    background: #dddddd;
+    pointer-events: none;
+    color: #aaa;
   }
 
   .image-frame {

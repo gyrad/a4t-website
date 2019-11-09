@@ -3,11 +3,10 @@ import PropTypes from "prop-types"
 import anime from "animejs/lib/anime.es"
 import styled from "styled-components"
 
-import Countdown from "../components/countdown"
 import EmailSignup from "../components/emailSignup"
 import Hero from "../components/hero"
 import Layout from "../components/layout"
-import { Section, Container } from "../components/layoutComponents"
+import { Container } from "../components/layoutComponents"
 import PurchaseCard from "../components/purchaseCard"
 import SEO from "../components/seo"
 
@@ -253,7 +252,7 @@ const IntroTextContainer = styled(Container)`
   }
 `
 
-const CountdownSection = styled(Section)`
+/* const CountdownSection = styled(Section)`
   background: rgb(34, 193, 195);
   background-image: linear-gradient(
     315deg,
@@ -273,7 +272,7 @@ const CountdownContainer = styled(Container)`
   @media (min-width: 600px) {
     height: 180px;
   }
-`
+` */
 
 const Quote = styled.p`
   font-weight: bold;
