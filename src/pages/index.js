@@ -101,6 +101,7 @@ const IndexPage = ({ path, data }) => {
           items={images}
           showPlayButton={false}
           showFullscreenButton={false}
+          showIndex={true}
         />
       </ImageGalleryContainer>
 
@@ -320,6 +321,19 @@ const ImageGalleryContainer = styled(Container)`
       ::before {
         color: white;
       }
+    }
+  }
+
+  .image-gallery-fullscreen-button {
+    box-shadow: none;
+    :focus {
+      border: 0;
+    }
+    ::before {
+      font-size: 2rem;
+    }
+    :hover {
+      transform: translateY(0) scale(1.1);
     }
   }
 
