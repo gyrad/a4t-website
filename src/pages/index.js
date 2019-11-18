@@ -1,7 +1,9 @@
 import React, { useEffect } from "react"
+import { graphql } from "gatsby"
 import PropTypes from "prop-types"
 import anime from "animejs/lib/anime.es"
 import styled from "styled-components"
+import ImageGallery from "react-image-gallery"
 
 import EmailSignup from "../components/emailSignup"
 import Hero from "../components/hero"
@@ -12,12 +14,12 @@ import SEO from "../components/seo"
 
 import shepardFairey from "../images/shepard_fairey.jpg"
 import monksArt from "../images/monks-art.jpeg"
-import promo1 from "../images/a4t2019-promo-1.jpg"
-import promo2 from "../images/a4t2019-promo-2.jpg"
-import promo3 from "../images/a4t2019-promo-3.jpg"
-import bidNowBanner from "../images/bidnowbanner.svg"
+// import promo1 from "../images/a4t2019-promo-1.jpg"
+// import promo2 from "../images/a4t2019-promo-2.jpg"
+// import promo3 from "../images/a4t2019-promo-3.jpg"
+// import bidNowBanner from "../images/bidnowbanner.svg"
 
-const IndexPage = ({ path }) => {
+const IndexPage = ({ path, data }) => {
   useEffect(() => {
     anime({
       targets: "#countdown",
@@ -50,22 +52,59 @@ const IndexPage = ({ path }) => {
   //   console.warn(error)
   // }
 
+  const images = data.largeImages.edges.map((image, i) => {
+    return {
+      original: image.node.childImageSharp.fluid.src,
+      thumbnail: data.thumbnails.edges[i].node.childImageSharp.fluid.src,
+    }
+  })
+
+  console.log(images)
+
   return (
     <Layout hideFooterEmailSignup={path === "/"}>
       <SEO title="Home" />
       <Hero />
 
-      <EmailSignup />
-
-      <Container>
-        <a
-          href="https://benefitevents.com/auctions/sft2019/catalog.asp"
-          target="_blank"
-          rel="noopener noreferrer"
+      <Container style={{ display: "flex", justifyContent: "center" }}>
+        <div
+          style={{
+            width: "100%",
+            position: "relative",
+            height: 0,
+            padding: 0,
+            paddingTop: "56.25%",
+          }}
         >
-          <img src={bidNowBanner} alt="Art for Tibet: Bid now!" />
-        </a>
+          <iframe
+            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FSFTArtForTibet%2Fvideos%2F2432237237043907%2F&show_text=0&width=560"
+            title="Art for Tibet 2019 Event Video"
+            style={{
+              border: "none",
+              overflow: "hidden",
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+            }}
+            scrolling="no"
+            frameborder="0"
+            allowTransparency="true"
+            allowFullScreen="true"
+          ></iframe>
+        </div>
       </Container>
+
+      <ImageGalleryContainer>
+        <ImageGallery
+          items={images}
+          showPlayButton={false}
+          showFullscreenButton={false}
+        />
+      </ImageGalleryContainer>
+
+      <EmailSignup />
 
       <IntroTextContainer>
         <div className="image-wrapper">
@@ -125,7 +164,7 @@ const IndexPage = ({ path }) => {
         </div>
       </IntroTextContainer>
 
-      <PromoWrapper>
+      {/* <PromoWrapper>
         <div>
           <img src={promo1} alt="1" />
         </div>
@@ -135,7 +174,7 @@ const IndexPage = ({ path }) => {
         <div>
           <img src={promo3} alt="3" />
         </div>
-      </PromoWrapper>
+      </PromoWrapper> */}
 
       {/* <CountdownSection>
         <CountdownContainer>
@@ -185,7 +224,7 @@ const IndexPage = ({ path }) => {
   )
 }
 
-const PromoWrapper = styled.div`
+/* const PromoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   @media (min-width: 600px) {
@@ -211,7 +250,7 @@ const PromoWrapper = styled.div`
       }
     }
   }
-`
+` */
 
 const IntroTextContainer = styled(Container)`
   display: block;
@@ -259,20 +298,45 @@ const IntroTextContainer = styled(Container)`
     rgba(34, 193, 195, 1) 0%,
     rgba(176, 109, 198, 1) 100%
   );
-`
+`*/
 
-const CountdownContainer = styled(Container)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-shadow: 0px 0px 22px rgba(0, 0, 0, 0.4);
-  height: 150px;
-  @media (min-width: 600px) {
-    height: 180px;
+const ImageGalleryContainer = styled(Container)`
+  .image-gallery-left-nav,
+  .image-gallery-right-nav {
+    font-size: 3rem;
+    box-shadow: none;
+    :focus {
+      border: 0;
+    }
+    ::before {
+      color: white;
+      text-shadow: none;
+    }
+    :hover {
+      transform: translateY(-50%);
+      box-shadow: none;
+      color: white;
+      opacity: 1;
+      ::before {
+        color: white;
+      }
+    }
   }
-` */
+
+  .image-gallery-image {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    img {
+      height: 400px;
+      @media (min-width: 600px) {
+        height: 650px;
+      }
+      width: auto;
+      object-fit: contain;
+    }
+  }
+`
 
 const Quote = styled.p`
   font-weight: bold;
@@ -287,6 +351,34 @@ const Quote = styled.p`
 
 IndexPage.propTypes = {
   path: PropTypes.string.isRequired,
+  data: PropTypes.object.isRequired,
 }
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    largeImages: allFile(filter: { relativeDirectory: { eq: "Gallery8" } }) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 1200, maxHeight: 800) {
+              src
+            }
+          }
+        }
+      }
+    }
+    thumbnails: allFile(filter: { relativeDirectory: { eq: "Gallery8" } }) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 120, maxHeight: 80) {
+              src
+            }
+          }
+        }
+      }
+    }
+  }
+`

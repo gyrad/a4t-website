@@ -68,7 +68,7 @@ const Navigation = ({ className }) => {
             Print Project
           </Link>
         </li>
-        <li>
+        {/* <li>
           <a
             href="https://benefitevents.com/auctions/sft2019/catalog.asp"
             target="_blank"
@@ -76,7 +76,7 @@ const Navigation = ({ className }) => {
           >
             Bid Now!
           </a>
-        </li>
+        </li> */}
         <div className="sm-icons">
           <hr />
           <a

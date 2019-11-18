@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 import { normalize } from "./normalize"
+import "react-image-gallery/styles/css/image-gallery.css"
 
 export const GlobalStyle = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap");

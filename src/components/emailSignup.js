@@ -44,7 +44,7 @@ const EmailSignup = ({ className }) => {
       <Container>
         <h2>
           <i className="fas fa-envelope-open-text"></i> &nbsp;Get email updates
-          on this year’s auction for Tibet:
+          on Art for Tibet:
         </h2>
         <div className="notification" ref={notificationRef}>
           <i className="fas fa-info-circle"></i> &nbsp; Hello
