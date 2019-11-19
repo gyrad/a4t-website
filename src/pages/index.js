@@ -66,7 +66,15 @@ const IndexPage = ({ path, data }) => {
       <SEO title="Home" />
       <Hero />
 
-      <Container style={{ display: "flex", justifyContent: "center" }}>
+      <Container
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          maxWidth: 700,
+          marginTop: "3rem",
+          marginBottom: "3rem",
+        }}
+      >
         <div
           style={{
             width: "100%",
@@ -74,6 +82,7 @@ const IndexPage = ({ path, data }) => {
             height: 0,
             padding: 0,
             paddingTop: "56.25%",
+            backgroundColor: "#BBB",
           }}
         >
           <iframe
@@ -87,6 +96,7 @@ const IndexPage = ({ path, data }) => {
               left: 0,
               width: "100%",
               height: "100%",
+              boxShadow: "0 8px 16px rgba(0,0,0,.3)",
             }}
             scrolling="no"
             frameborder="0"
