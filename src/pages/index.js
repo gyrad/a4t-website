@@ -64,13 +64,13 @@ const IndexPage = ({ path, data }) => {
   return (
     <Layout hideFooterEmailSignup={path === "/"}>
       <SEO title="Home" />
-      <Hero />
+      {/* <Hero /> */}
 
       <Container
         style={{
           display: "flex",
           justifyContent: "center",
-          maxWidth: 700,
+          maxWidth: 800,
           marginTop: "3rem",
           marginBottom: "3rem",
         }}
@@ -106,6 +106,37 @@ const IndexPage = ({ path, data }) => {
         </div>
       </Container>
 
+      <Container vpadding="3">
+        <Quote>
+          “I’ve been a longtime supporter of Students for a Free Tibet because
+          of the work they do to help the Tibetan people gain political
+          independence and freedom. I believe in the power of nonviolent,
+          grassroots movements to create change, and I will continue to advocate
+          for the human rights of Tibetans through my voice and through my art.
+          Free Tibet!”
+        </Quote>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            padding: ".5rem 0",
+          }}
+        >
+          <img
+            src={shepardFairey}
+            alt="Shepard Fairey"
+            style={{
+              width: 70,
+              height: 70,
+              borderRadius: "50%",
+            }}
+          />
+        </div>
+        <p style={{ fontSize: ".9rem", textAlign: "center", color: "#888" }}>
+          &mdash; Shepard Fairey
+        </p>
+      </Container>
+
       <ImageGalleryContainer>
         <ImageGallery
           items={images}
@@ -117,7 +148,7 @@ const IndexPage = ({ path, data }) => {
 
       <EmailSignup />
 
-      <IntroTextContainer>
+      {/* <IntroTextContainer>
         <div className="image-wrapper">
           <img src={monksArt} alt="Monks at a past Art for Tibet event." />
         </div>
@@ -139,7 +170,6 @@ const IndexPage = ({ path, data }) => {
               fill="#6ECEF5"
             />
           </svg>
-          {/* <h1>Art for Tibet 2019</h1> */}
           <p>
             This year Art for Tibet are thrilled to announce that legendary NYC
             hip-hop artist & Beastie Boys collaborator{" "}
@@ -173,7 +203,7 @@ const IndexPage = ({ path, data }) => {
             </em>
           </p>
         </div>
-      </IntroTextContainer>
+      </IntroTextContainer> */}
 
       {/* <PromoWrapper>
         <div>
@@ -200,37 +230,6 @@ const IndexPage = ({ path, data }) => {
       </CountdownSection> */}
 
       <PurchaseCard />
-
-      <Container vpadding="3">
-        <Quote>
-          “I’ve been a longtime supporter of Students for a Free Tibet because
-          of the work they do to help the Tibetan people gain political
-          independence and freedom. I believe in the power of nonviolent,
-          grassroots movements to create change, and I will continue to advocate
-          for the human rights of Tibetans through my voice and through my art.
-          Free Tibet!”
-        </Quote>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            padding: ".5rem 0",
-          }}
-        >
-          <img
-            src={shepardFairey}
-            alt="Shepard Fairey"
-            style={{
-              width: 70,
-              height: 70,
-              borderRadius: "50%",
-            }}
-          />
-        </div>
-        <p style={{ fontSize: ".9rem", textAlign: "center", color: "#888" }}>
-          &mdash; Shepard Fairey
-        </p>
-      </Container>
     </Layout>
   )
 }

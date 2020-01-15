@@ -63,11 +63,11 @@ const Navigation = ({ className }) => {
             About
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/printproject/" activeClassName="active-link">
             Print Project
           </Link>
-        </li>
+        </li> */}
         {/* <li>
           <a
             href="https://benefitevents.com/auctions/sft2019/catalog.asp"
